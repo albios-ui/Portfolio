@@ -458,6 +458,7 @@ header .navbar ul li a:hover {
 /* about media queries ends*/
 /* about section ends */
 
+/* skills section starts 
 /* skills section starts */
 .skills {
   min-height: 90vh;
@@ -531,6 +532,7 @@ header .navbar ul li a:hover {
 }
 /* skills media queries ends*/
 /* skills section ends */
+
 
 /* education section starts */
 .education {
@@ -1223,3 +1225,62 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+
+/* Filter buttons style */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons .filter-btn {
+  cursor: pointer;
+  background-color: #57059e; /* Adaptez cette couleur pour correspondre à votre design */
+  color: white;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons .filter-btn:hover, .filter-buttons .filter-btn.active {
+  background-color: #4a00e0; /* Une teinte plus sombre pour l'effet de survol */
+  color: #fff;
+}
+
+/* Début Pagination buttons style */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrer la pagination horizontalement */
+  padding: 10px 0; /* Ajouter un peu d'espace autour de la pagination */
+}
+
+.pagination .page-btn, .pagination .prev-btn, .pagination .next-btn {
+  cursor: pointer;
+  padding: 8px 16px; /* Ajustez l'espacement interne */
+  margin: 0 5px; /* Espacer les boutons */
+  background-color: transparent; /* Fond transparent pour commencer */
+  color: #FFFFFF; /* Texte blanc */
+  border: 2px solid #FFFFFF; /* Bordure blanche */
+  border-radius: 20px; /* Bords arrondis */
+  transition: background-color 0.3s, color 0.3s; /* Transition pour effet au survol */
+  font-size: 16px; /* Taille du texte */
+}
+
+.pagination .page-btn:hover, .pagination .prev-btn:hover, .pagination .next-btn:hover {
+  background-color: #FFFFFF; /* Fond blanc au survol */
+  color: #000000; /* Texte noir au survol */
+}
+
+.pagination .page-btn.active {
+  background-color: #FFFFFF; /* Fond blanc pour la page active */
+  color: #000000; /* Texte noir pour la page active */
+  pointer-events: none; /* Désactiver les événements de pointage pour la page active */
+}
+
+
+
+
+/* Fin Pagination buttons style */

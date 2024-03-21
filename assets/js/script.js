@@ -89,7 +89,7 @@ async function fetchData(type = "skills") {
     return data;
 }
 
-function showSkills(skills) {
+/* function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
     skills.forEach(skill => {
@@ -102,7 +102,7 @@ function showSkills(skills) {
             </div>`
     });
     skillsContainer.innerHTML = skillHTML;
-}
+} */
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
@@ -250,3 +250,145 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
 
+
+// Partie qui permet de gérer le filtre de mes compétences et la pagination 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const skills = [
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
+        // Ajoutez d'autres objets de compétences ici...
+    ];
+
+    let filteredSkills = [...skills];
+    const skillsPerPage = 12;
+    let currentPage = 1;
+
+    const skillsContainer = document.getElementById('skillsContainer');
+    const paginationContainer = document.querySelector('.pagination');
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    function displaySkills() {
+        const start = (currentPage - 1) * skillsPerPage;
+        const end = start + skillsPerPage;
+        const visibleSkills = filteredSkills.slice(start, end);
+
+        skillsContainer.innerHTML = '';
+        visibleSkills.forEach(skill => {
+            const skillElement = document.createElement('div');
+            skillElement.className = 'bar';
+            skillElement.innerHTML = `
+                <div class="info">
+                    <img src="${skill.imageUrl}" alt="${skill.name}"/>
+                    <span>${skill.name}</span>
+                </div>
+            `;
+            skillsContainer.appendChild(skillElement);
+        });
+
+        updatePaginationButtons();
+    }
+
+    function setupPagination() {
+        document.querySelectorAll('.pagination .page-btn').forEach(btn => btn.remove()); // Clear existing buttons
+
+        const pageCount = Math.ceil(filteredSkills.length / skillsPerPage);
+        for (let i = 1; i <= pageCount; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.className = 'page-btn';
+            pageButton.textContent = i;
+            pageButton.setAttribute('data-page', i);
+            pageButton.addEventListener('click', () => {
+                currentPage = i;
+                displaySkills();
+            });
+            paginationContainer.insertBefore(pageButton, nextButton);
+        }
+    }
+
+    function updatePaginationButtons() {
+        document.querySelectorAll('.pagination .page-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        const activeButton = document.querySelector(`.pagination .page-btn[data-page="${currentPage}"]`);
+        if (activeButton) {
+            activeButton.classList.add('active');
+        }
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            displaySkills();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        const pageCount = Math.ceil(filteredSkills.length / skillsPerPage);
+        if (currentPage < pageCount) {
+            currentPage++;
+            displaySkills();
+        }
+    });
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active')); // Remove 'active' from all filter buttons
+            this.classList.add('active'); // Set 'active' class on clicked filter button
+
+            const filter = this.getAttribute('data-filter');
+            filteredSkills = filter === 'all' ? [...skills] : skills.filter(skill => skill.category === filter);
+            
+            currentPage = 1;
+            displaySkills();
+            setupPagination(); // Setup the pagination buttons again as the number of pages may have changed
+            updatePaginationButtons();
+        });
+    });
+
+    // Initial calls
+    displaySkills();
+    setupPagination(); // Setup pagination initially
+    updatePaginationButtons(); // Met à jour les boutons pour marquer le bouton "1" comme actif
+});
+
+
+
+
+
+
+
+
+// Fin de la partie filtrage et pagination des compétences 

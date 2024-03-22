@@ -71,7 +71,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+    strings: ["Chef de projet AMOA", "Architecte solution SI", "Business Analayst", "Consultant en transformation digitale"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -383,6 +383,47 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPagination(); // Setup pagination initially
     updatePaginationButtons(); // Met à jour les boutons pour marquer le bouton "1" comme actif
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const projects = [
+      { name: 'Project One', date: 'Oct 2022', description: 'Brief description of the first project.', tools: 'HTML, CSS, JavaScript', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Two', date: 'Nov 2022', description: 'Brief description of the second project.', tools: 'Python, Django', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Three', date: 'Dec 2022', description: 'Brief description of the third project.', tools: 'React, Node', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Four', date: 'Jan 2023', description: 'Brief description of the fourth project.', tools: 'Vue, Vuex', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Five', date: 'Feb 2023', description: 'Brief description of the fifth project.', tools: 'Angular, TypeScript', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' }
+    ];
+  
+    const projectsContainer = document.querySelector('.project-container');
+  
+    function renderProjects() {
+      projects.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+        projectCard.innerHTML = `
+          <img src="${project.imageUrl}" alt="${project.name}">
+          <div class="project-info">
+            <h3>${project.name}</h3>
+            <span>${project.date}</span>
+            <p>${project.description}</p>
+            <p>Tools: ${project.tools}</p>
+            <div class="project-links">
+              <a href="${project.codeLink}" class="project-button project-code">
+                <i class="fas fa-code"></i> Project Code
+              </a>
+              <a href="${project.liveLink}" class="project-button live-project">
+                <i class="fas fa-external-link-alt"></i> Live Project
+              </a>
+            </div>
+          </div>
+        `;
+        projectsContainer.appendChild(projectCard);
+      });
+    }
+  
+    renderProjects();
+  });
+  
+
 
 
 

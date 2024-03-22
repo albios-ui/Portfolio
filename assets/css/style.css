@@ -306,9 +306,7 @@ header .navbar ul li a:hover {
   color: #fff;
   background-color: #0685da;
 }
-.social-icons a.github:hover {
-  background-color: #0e0e0e;
-}
+
 .social-icons a.twitter:hover {
   background-color: #00aced;
 }
@@ -514,6 +512,60 @@ header .navbar ul li a:hover {
   margin-left: 0.5rem;
 }
 /* skills media queries starts*/
+
+
+/* skills media queries starts*/
+@media screen and (max-width: 1180px) {
+  .skills .container {
+    padding: 0;
+    margin: 0;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(5, 2fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .skills .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .skills .container {
+    padding: 0;
+    margin: 0;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .skills .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .skills .container {
+    padding: 0;
+    margin: 0;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .skills .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .skills .container {
     padding: 0;
@@ -529,7 +581,7 @@ header .navbar ul li a:hover {
     margin-top: 5px;
     width: 100%;
   }
-}
+} 
 /* skills media queries ends*/
 /* skills section ends */
 
@@ -641,124 +693,90 @@ header .navbar ul li a:hover {
 /* education media queries ends*/
 /* education section ends */
 
+
 /* work section starts */
+
 .work {
-  /* background: #010124; */
-  background: linear-gradient(to bottom, #000031, #00002c);
+  background-color: #e0f7fa; /* Couleur de fond */
+  padding: 40px 0; /* Espace autour du contenu */
+  text-align: center; /* Centre le texte */
 }
-.work h2 {
-  color: #fff;
-  padding: 1rem;
-}
-.work .heading span {
-  color: rgb(255, 230, 0);
-}
-.work .box-container {
+
+.introduction {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 2rem;
-}
-.work .box-container .box {
-  flex: 1 1 30rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-  height: 30rem;
-}
-.work .box-container .box img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.work .box-container .box .content {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 85%;
-  left: 0;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction: column;
-}
-.work .box-container .box .content .tag {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 4.5rem;
-  width: 100%;
-  padding-left: 1rem;
-  background: #ffd900;
+  max-width: 90%; /* Adjust maximum width */
+  margin: auto;
+  gap: 20px; /* Space between text and image */
 }
-.work .box-container .box .content .tag h3 {
-  font-size: 2rem;
+
+.intro-text {
+  flex: 1; /* Takes up as much space as possible */
+  padding-right: 20px; /* Space between text and image */
 }
-.work .box-container .box:hover .content {
-  top: 25%;
+
+.intro-text h2, .intro-text p {
+  margin-bottom: 50px; /* Space between elements */
 }
-.work .desc {
-  margin: 2rem;
+
+.projects-illustration {
+  flex: 1; /* Takes up as much space as possible */
+  max-width: 50%; /* Maximum width of the image */
+}
+
+/* Adjusting for smaller screens */
+@media screen and (max-width: 768px) {
+  .introduction {
+    flex-direction: column; /* Stack them on smaller screens */
+    text-align: center; /* Center the text */
+  }
+
+  .projects-illustration {
+    margin-top: 20px; /* Space between text and image */
+    max-width: 80%; /* Adjust width for smaller screens */
+  }
+}
+
+/* Below is the existing CSS for your project cards */
+
+
+.work .project-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centre le conteneur */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+  justify-content: center; /* Centre les éléments */
 }
-.work .desc p {
-  font-size: 1.5rem;
+
+.work .project-card {
+  width: calc(33.333% - 40px); /* Trois éléments par ligne moins l'espacement */
+  margin: 20px; /* Espace autour des éléments */
+  background: white; /* Couleur de fond des cartes */
+  padding: 20px;
+  box-sizing: border-box; /* Inclut padding et border dans la largeur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+  border-radius: 10px; /* Bords arrondis */
+  transition: transform 0.3s ease; /* Animation */
 }
-.work .desc .btns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
+
+.work .project-card:hover {
+  transform: translateY(-5px); /* Soulève la carte */
 }
-.work .desc .btns .btn {
-  line-height: 0;
-  display: inline;
-  padding: 1.5rem 2.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.5rem;
-  color: #fff;
-  background: rgb(12, 12, 12);
-  margin-right: 2rem;
+
+@media screen and (max-width: 768px) {
+  .work .project-card {
+    width: calc(50% - 40px); /* Deux éléments par ligne pour les tablettes */
+  }
 }
-.work .desc .btns .btn:hover {
-  background: #310ae0f5;
+
+@media screen and (max-width: 480px) {
+  .work .project-card {
+    width: 100%; /* Un élément par ligne pour les mobiles */
+    margin: 10px 0; /* Réduit l'espace pour les petits écrans */
+  }
 }
-.work .viewall {
-  display: flex;
-  justify-content: center;
-}
-.work .viewall .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  border: 2px solid #fff;
-  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
-  text-align: center;
-}
-.work .viewall .btn span {
-  font-weight: 600;
-  font-size: 1.7rem;
-  font-family: "Nunito", sans-serif;
-}
-.work .viewall .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-.work .viewall .btn:hover {
-  background: #fff;
-  color: #000;
-}
-.work .viewall .btn:hover i {
-  transform: translateX(5px);
-}
+
 /* work section ends */
 
 /* experience section starts */
@@ -1284,3 +1302,111 @@ form .button-area {
 
 
 /* Fin Pagination buttons style */
+
+
+.github-star {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  font-weight: 500; /* Adjust based on your preference */
+}
+
+.github-star i {
+  margin-right: 10px;
+  transition: transform 0.3s, color 0.3s;
+  /* Initial scale and color */
+  transform: scale(1);
+  color: yellow; /* Change if you want a different initial color */
+}
+
+.github-star:hover {
+  background-color: #0056b3;
+}
+
+.github-star:hover i {
+  /* Scale up and rotate the star on hover */
+  transform: scale(1.2) rotate(20deg);
+  color: #ffeb3b; /* Bright yellow on hover */
+}
+
+/* Ensure the star icon is included if using FontAwesome */
+@keyframes star-animation {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.github-star i {
+  animation: star-animation 2s infinite ease-in-out;
+}
+
+
+
+/*css buton project + code view */
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent; /* Transparent background initially */
+  color: #4CAF50; /* Initial color for text */
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #4CAF50; /* Solid border with the color of the text */
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500; /* Adjust based on your preference */
+  margin: 5px; /* Space between buttons */
+  overflow: hidden; /* Ensure that background fill stays within bounds */
+  position: relative; /* For pseudo-elements positioning */
+}
+
+.project-button i {
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.project-button:hover {
+  color: white; /* White text on hover */
+  background-color: #4CAF50; /* Background color on hover */
+}
+
+.project-button:hover i {
+  transform: scale(1.2); /* Icon grows slightly on hover */
+}
+
+/* Separate styles for the Live Project button */
+.live-project {
+  color: #008CBA; /* Initial color for live project text */
+  border-color: #008CBA; /* Border color matches text */
+}
+
+.live-project:hover {
+  background-color: #008CBA; /* Blue background on hover */
+}
+
+/* Adding 'after' pseudo-element for a fill effect */
+.project-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4CAF50; /* Same as hover background */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-button:hover::after {
+  transform: scaleX(1);
+}
+
+/* Adjusting 'after' pseudo-element for the Live Project button */
+.live-project::after {
+  background-color: #008CBA; /* Same as hover background for live project */
+}

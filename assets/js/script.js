@@ -386,8 +386,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const projects = [
-      { name: 'Project One', date: 'Oct 2022', description: 'Brief description of the first project.', tools: 'HTML, CSS, JavaScript', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Two', date: 'Nov 2022', description: 'Brief description of the second project.', tools: 'Python, Django', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project One', date: 'Oct 2022', description: 'Brief description of the first project.',tools: 'HTML, CSS, JavaScript', tools: 'HTML, CSS, JavaScript', imageUrl: 'https://via.placeholder.com/200 x 150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Two', date: 'Nov 2022', description: 'Brief description of the second project.', tools: 'Python, Django', imageUrl: 'https://via.placeholder.com/180', codeLink: '#', liveLink: '#' },
       { name: 'Project Three', date: 'Dec 2022', description: 'Brief description of the third project.', tools: 'React, Node', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
       { name: 'Project Four', date: 'Jan 2023', description: 'Brief description of the fourth project.', tools: 'Vue, Vuex', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
       { name: 'Project Five', date: 'Feb 2023', description: 'Brief description of the fifth project.', tools: 'Angular, TypeScript', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' }
@@ -406,6 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span>${project.date}</span>
             <p>${project.description}</p>
             <p>Tools: ${project.tools}</p>
+            <p>Type: ${project.type}</p>
             <div class="project-links">
               <a href="${project.codeLink}" class="project-button project-code">
                 <i class="fas fa-code"></i> Project Code

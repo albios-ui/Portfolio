@@ -779,175 +779,141 @@ header .navbar ul li a:hover {
 
 /* work section ends */
 
-/* experience section starts */
-.experience .timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.experience .timeline::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  background: #020133;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-  z-index: -2;
-}
-.experience .container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-/*circles on timeline*/
-.experience .container::after {
-  content: "\f0b1";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: rgb(255, 255, 255);
-  border: 4px solid #ff9f55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 100;
-  font-size: 1.89rem;
+
+/*experience section debut */
+.experience-section {
+  background-color: #f8f8f8;
+  padding: 50px 5%;
   text-align: center;
-  font-weight: 600;
-  color: #02094b;
-  font-family: "Font Awesome\ 5 Free";
-}
-.experience .left {
-  left: 0;
-}
-.experience .right {
-  left: 50%;
-}
-/* arrows pointing right */
-.experience .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid #f68c09;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #f68c09;
-}
-/* arrows pointing left  */
-.experience .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid #f68c09;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #f68c09 transparent transparent;
-}
-.experience .right::after {
-  left: -16px;
-}
-.experience .content {
-  background-color: #f68c09;
-  position: relative;
-  border-radius: 6px;
-}
-.experience .content .tag {
-  font-size: 1.3rem;
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
-}
-.experience .content .desc {
-  margin-left: 1.5rem;
-  padding-bottom: 1rem;
-}
-.experience .content .desc h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-.experience .content .desc p {
-  font-size: 1.2rem;
-}
-/* view all button */
-.morebtn {
-  display: flex;
-  justify-content: center;
-}
-.morebtn .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
-  color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-  text-align: center;
-}
-.morebtn .btn span {
-  font-weight: 600;
-  font-size: 1.7rem;
-  font-family: "Nunito", sans-serif;
-}
-.morebtn .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-.morebtn .btn:hover {
-  background: #1a047e;
-}
-.morebtn .btn:hover i {
-  transform: translateX(5px);
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  .experience {
-    min-height: 80vh;
+.experience-container {
+  max-width: 1000px; /* Modifié pour réduire la largeur totale */
+  margin: auto;
+  padding: 20px; /* Ajouté pour assurer un espacement interne */
+}
+
+.experience-title {
+  color: #2a3f54;
+  margin-bottom: 40px;
+}
+
+.experience-timeline {
+  text-align: left;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+  width: 100%; /* S'assure que l'élément occupe toute la largeur du conteneur */
+}
+
+.experience-item:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.experience-logo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  margin-right: 25px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.experience-content {
+  flex-grow: 1;
+}
+
+.experience-period {
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.experience-job-title {
+  color: #495057;
+  margin: 10px 0 5px;
+}
+
+.experience-company {
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.experience-details {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-missions {
+  list-style: inside disc;
+  margin-top: 10px;
+}
+
+.experience-missions li {
+  margin-bottom: 5px;
+}
+
+/* Responsivité */
+@media (max-width: 1024px) {
+  .experience-item {
+      flex-direction: column;
+      align-items: start;
   }
-  .experience .timeline {
-    margin-top: 2rem;
+
+  .experience-logo {
+      margin-right: 0;
+      margin-bottom: 15px;
   }
-  .experience .timeline::after {
-    left: 31px;
-  }
-  .experience .container {
-    width: 100%;
-    padding-left: 8rem;
-    padding-right: 2rem;
-  }
-  .experience .container::after {
-    font-size: 2.2rem;
-  }
-  .experience .container::before {
-    left: 61px;
-    border: medium solid #f68c09;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #f68c09 transparent transparent;
-  }
-  .experience .left::after {
-    left: 15px;
-  }
-  .experience .right::after {
-    left: 15px;
-  }
-  .experience .right {
-    left: 0%;
-  }
-  .morebtn {
-    margin-top: 3rem;
+
+  .experience-content {
+      text-align: left;
   }
 }
-/* experience media queries ends */
+
+@media (max-width: 768px) {
+  .experience-section {
+      padding: 30px 5%;
+  }
+
+  .experience-title {
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-container {
+      max-width: 100%;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .experience-logo {
+      width: 80px;
+      height: 80px;
+  }
+}
+
+
 /* experience section ends */
 
 /* contact section starts */
@@ -1086,24 +1052,47 @@ form .button-area {
   left: 8px;
 }
 /* contact section media queries starts */
-@media (max-width: 900px) {
-  .contact {
-    min-height: 70vh;
-  }
+/* Responsivité ajoutée à votre CSS existant */
+@media (max-width: 1200px) {
   .contact .container {
-    margin: 3rem 0 2rem 0;
-  }
-  .contact .container .content {
-    padding: 18px 12px;
-  }
-  .contact .content .image-box {
-    display: none;
-  }
-  .contact .content form {
-    width: 100%;
-    margin-right: 2rem;
+      padding: 2rem; /* Ajustement de l'espacement */
   }
 }
+
+@media (max-width: 992px) {
+  .contact .container {
+      padding: 2rem 1rem; /* Réduction de l'espacement pour les tablettes */
+  }
+  .contact .content .image-box,
+  .contact .content form {
+      width: 100%; /* Pleine largeur pour les éléments dans les petites tablettes */
+      margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .container {
+      width: auto; /* Pleine largeur pour les dispositifs mobiles */
+      margin: 20px; /* Petit espacement autour du conteneur */
+  }
+  .contact .content {
+      flex-direction: column; /* Empile les éléments verticalement sur les mobiles */
+  }
+  .contact .content .image-box img {
+      max-width: 80%; /* Réduction de la taille de l'image sur les mobiles */
+      margin: 0 auto; /* Centrer l'image */
+  }
+}
+
+@media (max-width: 576px) {
+  .contact .container .content {
+      padding: 1rem; /* Espacement réduit pour les très petits dispositifs */
+  }
+  .contact .content .image-box img {
+      max-width: 100%; /* Utilise toute la largeur disponible */
+  }
+}
+
 /* contact section media queries ends */
 /* contact section ends */
 

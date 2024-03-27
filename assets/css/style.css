@@ -693,90 +693,168 @@ header .navbar ul li a:hover {
 /* education media queries ends*/
 /* education section ends */
 
-
-/* work section starts */
-
+/* Section de travail commence */
 .work {
-  background-color: #e0f7fa; /* Couleur de fond */
-  padding: 40px 0; /* Espace autour du contenu */
-  text-align: center; /* Centre le texte */
+  background-color: #e0f7fa;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .introduction {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 90%; /* Adjust maximum width */
+  max-width: 90%;
   margin: auto;
-  gap: 20px; /* Space between text and image */
+  gap: 20px;
 }
 
 .intro-text {
-  flex: 1; /* Takes up as much space as possible */
-  padding-right: 20px; /* Space between text and image */
+  flex: 1;
+  padding-right: 20px;
 }
 
 .intro-text h2, .intro-text p {
-  margin-bottom: 50px; /* Space between elements */
+  margin-bottom: 20px; /* Ajusté pour une meilleure uniformité */
 }
 
 .projects-illustration {
-  flex: 1; /* Takes up as much space as possible */
-  max-width: 50%; /* Maximum width of the image */
+  flex: 1;
+  max-width: 50%;
 }
 
-/* Adjusting for smaller screens */
-@media screen and (max-width: 768px) {
-  .introduction {
-    flex-direction: column; /* Stack them on smaller screens */
-    text-align: center; /* Center the text */
-  }
+/* Section de travail finit */
 
-  .projects-illustration {
-    margin-top: 20px; /* Space between text and image */
-    max-width: 80%; /* Adjust width for smaller screens */
-  }
-}
-
-/* Below is the existing CSS for your project cards */
-
-
+/* Responsivité des cartes de projet */
 .work .project-container {
   max-width: 1200px;
-  margin: 0 auto; /* Centre le conteneur */
+  margin: 20px auto;
   display: flex;
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
-  justify-content: center; /* Centre les éléments */
+  flex-wrap: wrap;
+  justify-content: center; /* Modification pour centrer les cartes de manière cohérente */
 }
 
 .work .project-card {
-  width: calc(33.333% - 40px); /* Trois éléments par ligne moins l'espacement */
-  margin: 20px; /* Espace autour des éléments */
-  background: white; /* Couleur de fond des cartes */
+  margin: 20px;
+  background: white;
   padding: 20px;
-  box-sizing: border-box; /* Inclut padding et border dans la largeur */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
-  border-radius: 10px; /* Bords arrondis */
-  transition: transform 0.3s ease; /* Animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  align-items: center;
+  transition: transform 0.3s ease;
+  width: calc(33.333% - 40px); /* Définition initiale pour les écrans larges */
 }
 
-.work .project-card:hover {
-  transform: translateY(-5px); /* Soulève la carte */
+.work .project-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width: 768px) {
+.work .project-info {
+  text-align: center;
+}
+
+.work .project-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.work .project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  min-width: 120px;
+  font-weight: bold;
+}
+
+/* Ajustement pour les tablettes */
+@media screen and (max-width: 1024px) {
   .work .project-card {
-    width: calc(50% - 40px); /* Deux éléments par ligne pour les tablettes */
+    width: calc(50% - 40px);
   }
 }
 
+/* Ajustement pour les mobiles et tablettes plus petites */
+@media screen and (max-width: 768px) {
+  .introduction {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projects-illustration, .intro-text {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .work .project-card {
+    width: calc(100% - 40px);
+  }
+}
+
+/* Ajustements supplémentaires pour les très petits appareils */
 @media screen and (max-width: 480px) {
   .work .project-card {
-    width: 100%; /* Un élément par ligne pour les mobiles */
-    margin: 10px 0; /* Réduit l'espace pour les petits écrans */
+    width: calc(100% - 20px);
+  }
+}
+l
+/* Styles de base, comme précédemment */
+
+
+/* Styles de base pour les filtres */
+.filter-container {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%; /* Assure que le conteneur de filtre ne dépasse pas la largeur de la page */
+}
+
+.filter-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px;
+}
+
+.filter-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.filter-btn.active {
+  background-color: #316a3e;
+}
+
+@media (max-width: 768px) {
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
 
+@media (max-width: 480px) {
+  .filter-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    flex-basis: 45%; /* Prendre presque la moitié de l'espace disponible */
+    margin-bottom: 10px; /* Espacement supplémentaire en bas */
+  }
+}
 /* work section ends */
 
 
@@ -948,6 +1026,9 @@ header .navbar ul li a:hover {
   width: 45%;
   margin-right: 3.5rem;
 }
+
+
+
 form .form-group {
   display: flex;
   flex-direction: column;
@@ -1053,6 +1134,13 @@ form .button-area {
 }
 /* contact section media queries starts */
 /* Responsivité ajoutée à votre CSS existant */
+@media (min-width: 1201px) {
+  .contact .container {
+    max-width: 1200px; /* ou la largeur maximale que vous souhaitez */
+    margin: 2rem auto; /* Centrer le conteneur */
+  }
+}
+
 @media (max-width: 1200px) {
   .contact .container {
       padding: 2rem; /* Ajustement de l'espacement */

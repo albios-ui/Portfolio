@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./projectStyle.css">
+    <meta name="description" content="Case study page of Project" />
+<!--     <link rel="stylesheet" href="css/style.css" />
+ -->    <link rel="stylesheet" href="./projectStyle.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"rel="stylesheet"/>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
@@ -44,32 +51,65 @@
     <button class="btn" data-filter=".android">Android App</button>
   </div>
 
-  <div class="box-container">
 
-      <div class="box tilt">
-      <img src="/assets/images/projects/agecalc.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
+
+    <div class="main-container">
+      <div class="project-details__content">
+        <div class="project-details__showcase-img-cont">
+          <img
+            src="../assets/images/uml.jpg"
+            alt="Project Image"
+            class="project-details__showcase-img"
+          />
         </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+        <div class="project-container">
+            <div class="project-details">
+              <div class="details-text">
+                <h3>Titre du projet</h3> 
+                <p><strong>Type du projet :</strong></p>
+                <p>[Type ici]</p>
+                
+                <p><strong>Année :</strong></p>
+                <p>[Année ici]</p>
+                
+                <p><strong>Projet en :</strong></p>
+                <p>[Groupe ou Solo]</p>
+                
+                <h3>Responsabilité et Rôles</h3>
+                <ul>
+                  <li>[Rôle 1]</li>
+                  <li>[Rôle 2]</li>
+                  <li>[Rôle 3]</li>
+                  <!-- Ajoutez autant de rôles que nécessaire -->
+                </ul>
+                
+                <p><strong>Technologies utilisées :</strong></p>
+                <p>[Listez ici]</p>
+                
+                <p><strong>Méthode de gestion du projet :</strong></p>
+                <p>[Méthode ici]</p>
+              </div>
+              <div class="screenshots-container">
+                <div class="carousel-container">
+                  <div class="carousel-slide">
+                    <img src="../assets/images/screenshot1.jpg" alt="Screenshot 1">
+                    <img src="../assets/images/screenshot2.jpg" alt="Screenshot 2">
+                    <!-- Plus de screenshots -->
+                  </div>
+                  <button id="prevBtn">&#10094;</button>
+                  <button id="nextBtn">&#10095;</button>
+                </div>
+              </div>
+            </div>
+            <div class="ppt-container">
+              <!-- IFrame de votre PPT -->
+              <iframe src="YOUR_SHAREABLE_LINK_HERE/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>   
-
-  </div>
-
-  <div class="backbtn"> 
-    <a href="../index.html#home" class="btn">
-        <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
-  </a>
-  </div>
+          </div>
+          
+          
+     
 
 </section>
 <!-- work project section ends -->
@@ -94,7 +134,8 @@
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
-<script src="./script.js"></script>
+<script src="./projectscript.js"></script>
+<script src="../assets/js/script.js"></script>
 
 </body>
 </html>

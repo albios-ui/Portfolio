@@ -384,44 +384,119 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePaginationButtons(); // Met à jour les boutons pour marquer le bouton "1" comme actif
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
     const projects = [
-      { name: 'Project One', date: 'Oct 2022', description: 'Brief description of the first project.',tools: 'HTML, CSS, JavaScript', tools: 'HTML, CSS, JavaScript', imageUrl: 'https://via.placeholder.com/200 x 150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Two', date: 'Nov 2022', description: 'Brief description of the second project.', tools: 'Python, Django', imageUrl: 'https://via.placeholder.com/180', codeLink: '#', liveLink: '#' },
-      { name: 'Project Three', date: 'Dec 2022', description: 'Brief description of the third project.', tools: 'React, Node', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Four', date: 'Jan 2023', description: 'Brief description of the fourth project.', tools: 'Vue, Vuex', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Five', date: 'Feb 2023', description: 'Brief description of the fifth project.', tools: 'Angular, TypeScript', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' }
+      { name: 'Project One', date: '2022-10', description: 'Brief description of the first project.', tools: 'HTML, CSS, JavaScript', imageUrl: 'https://via.placeholder.com/20x150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Two', date: '2022-11', description: 'Brief description of the second project.', tools: 'Python, Django', imageUrl: 'https://via.placeholder.com/120', codeLink: '#', liveLink: '#' },
+      { name: 'Project Three', date: '2022-12', description: 'Brief description of the third project.', tools: 'React, Node', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Four', date: '2023-01', description: 'Brief description of the fourth project.', tools: 'Vue, Vuex', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Five', date: '2023-02', description: 'Brief description of the fifth project.', tools: 'Angular, TypeScript', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' }
+    ].sort((a, b) => b.date.localeCompare(a.date)); // Tri par date décroissante
+  
+    const projectsContainer = document.querySelector('.project-container');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+  
+    function renderProjects(filter = '') {
+      projectsContainer.innerHTML = ''; // Effacer les projets existants avant de rerendre
+      projects
+        .filter(project => filter === 'all' || project.tools.includes(filter))
+        .forEach(project => {
+          const projectCard = document.createElement('div');
+          projectCard.className = 'project-card';
+          projectCard.innerHTML = `
+            <img src="${project.imageUrl}" alt="${project.name}">
+            <div class="project-info">
+              <h3>${project.name}</h3>
+              <span>${project.date}</span>
+              <p>${project.description}</p>
+              <p>Tools: ${project.tools}</p>
+              <div class="project-links">
+                <a href="${project.codeLink}" class="project-button project-code">
+                  <i class="fas fa-code"></i> Project Code
+                </a>
+                <a href="${project.liveLink}" class="project-button live-project">
+                  <i class="fas fa-external-link-alt"></i> Live Project
+                </a>
+              </div>
+            </div>
+          `;
+          projectsContainer.appendChild(projectCard);
+        });
+    }
+  
+    // Initialement, afficher tous les projets
+    renderProjects();
+  
+    // Ajout de l'écouteur d'événements pour les boutons de filtrage
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active')); // retire 'active' de tous les boutons
+          button.classList.add('active'); // ajoute 'active' au bouton cliqué
+          const filter = button.getAttribute('data-filter');
+          renderProjects(filter);
+        });
+      });
+
+      
+
+    
+
+  }); */
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const projects = [
+      { name: 'Project One', date: '2022-10', description: 'Brief description of the first project.', role: 'Developer', type: 'Web', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Two', date: '2022-11', description: 'Brief description of the second project.', role: 'Lead Developer', type: 'Backend', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Three', date: '2022-12', description: 'Brief description of the third project.', role: 'Project Manager', type: 'Fullstack', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Four', date: '2023-01', description: 'Brief description of the fourth project.', role: 'UI/UX Designer', type: 'Vue', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Five', date: '2023-02', description: 'Brief description of the fifth project.', role: 'Frontend Developer', type: 'Angular', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' }
+      // Ajoutez plus de projets ici selon vos besoins
     ];
   
     const projectsContainer = document.querySelector('.project-container');
+    const filterButtons = document.querySelectorAll('.filter-btn');
   
-    function renderProjects() {
-      projects.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.className = 'project-card';
-        projectCard.innerHTML = `
-          <img src="${project.imageUrl}" alt="${project.name}">
-          <div class="project-info">
-            <h3>${project.name}</h3>
-            <span>${project.date}</span>
-            <p>${project.description}</p>
-            <p>Tools: ${project.tools}</p>
-            <p>Type: ${project.type}</p>
-            <div class="project-links">
-              <a href="${project.codeLink}" class="project-button project-code">
-                <i class="fas fa-code"></i> Project Code
-              </a>
-              <a href="${project.liveLink}" class="project-button live-project">
-                <i class="fas fa-external-link-alt"></i> Live Project
-              </a>
+    function renderProjects(filter = '') {
+      projectsContainer.innerHTML = ''; // Efface les projets existants avant de rerendre
+      projects
+        .filter(project => filter === 'all' || project.type.includes(filter))
+        .forEach(project => {
+          const projectCard = document.createElement('div');
+          projectCard.className = 'project-card';
+          projectCard.innerHTML = `
+            <img src="${project.imageUrl}" alt="${project.name}" style="width:100%; height:auto; border-radius: 5px;">
+            <div class="project-info">
+              <h3>${project.name}</h3>
+              <span>${project.date}</span>
+              <p>${project.description}</p>
+              <p>Role: ${project.role}</p>
+              <p>Type: ${project.type}</p>
+              <div class="project-links">
+                <a href="${project.codeLink}" class="project-button project-code">
+                  <i class="fas fa-code"></i> Project Code
+                </a>
+                <a href="${project.liveLink}" class="project-button live-project">
+                  <i class="fas fa-external-link-alt"></i> Live Project
+                </a>
+              </div>
             </div>
-          </div>
-        `;
-        projectsContainer.appendChild(projectCard);
-      });
+          `;
+          projectsContainer.appendChild(projectCard);
+        });
     }
   
+    // Initialement, afficher tous les projets
     renderProjects();
+  
+    // Ajout de l'écouteur d'événements pour les boutons de filtrage
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active')); // Retire 'active' de tous les boutons
+        button.classList.add('active'); // Ajoute 'active' au bouton cliqué
+        const filter = button.getAttribute('data-filter');
+        renderProjects(filter);
+      });
+    });
   });
   
 

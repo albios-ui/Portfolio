@@ -11,3 +11,11 @@ b - changer de noms aux pages
 
 
 - créer image avec fond d'écran noir rouge en utilisant modèle photoshop ! 
+
+
+ajouter filtres pour projet 
+régler le problème avec contact ( responsivité à )pourquoi pas un nouveau type de formulaire 
+création d'un sharepoint 
+ajouter role pour chaque projet 
+AJOUTER LA LISTE DE TOUT MES PROJETS et les lister ! ( j'envisage qu'ils soient affiché à gauche)
+

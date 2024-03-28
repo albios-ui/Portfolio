@@ -43,76 +43,51 @@
 
   <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
   
-  <div id="filters" class="button-group">
-    <button class="btn is-checked" data-filter="*">All Projects</button>
-    <button class="btn" data-filter=".mern">MERN Stack</button>
-    <button class="btn" data-filter=".lamp">LAMP Stack</button>
-    <button class="btn" data-filter=".basicweb">Basic Web</button>
-    <button class="btn" data-filter=".android">Android App</button>
-  </div>
 
 
 
-    <div class="main-container">
-      <div class="project-details__content">
-        <div class="project-details__showcase-img-cont">
-          <img
-            src="../assets/images/uml.jpg"
-            alt="Project Image"
-            class="project-details__showcase-img"
-          />
+
+  <div class="project-container">
+    <div class="project-details">
+      <div class="details-text">
+        <!-- Les détails du projet seront ajoutés ici dynamiquement -->
+      </div>
+      
+      <div class="screenshots-carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <!-- Les captures d'écran seront ajoutées ici par JavaScript -->
+          </div>
+          <div class="carousel-indicators">
+            <!-- Les points de pagination seront ajoutés ici par JavaScript -->
+          </div>
         </div>
-        <div class="project-container">
-            <div class="project-details">
-              <div class="details-text">
-                <h3>Titre du projet</h3> 
-                <p><strong>Type du projet :</strong></p>
-                <p>[Type ici]</p>
-                
-                <p><strong>Année :</strong></p>
-                <p>[Année ici]</p>
-                
-                <p><strong>Projet en :</strong></p>
-                <p>[Groupe ou Solo]</p>
-                
-                <h3>Responsabilité et Rôles</h3>
-                <ul>
-                  <li>[Rôle 1]</li>
-                  <li>[Rôle 2]</li>
-                  <li>[Rôle 3]</li>
-                  <!-- Ajoutez autant de rôles que nécessaire -->
-                </ul>
-                
-                <p><strong>Technologies utilisées :</strong></p>
-                <p>[Listez ici]</p>
-                
-                <p><strong>Méthode de gestion du projet :</strong></p>
-                <p>[Méthode ici]</p>
-              </div>
-              <div class="screenshots-container">
-                <div class="carousel-container">
-                  <div class="carousel-slide">
-                    <img src="../assets/images/screenshot1.jpg" alt="Screenshot 1">
-                    <img src="../assets/images/screenshot2.jpg" alt="Screenshot 2">
-                    <!-- Plus de screenshots -->
-                  </div>
-                  <button id="prevBtn">&#10094;</button>
-                  <button id="nextBtn">&#10095;</button>
-                </div>
-              </div>
-            </div>
-            <div class="ppt-container">
-              <!-- IFrame de votre PPT -->
-              <iframe src="YOUR_SHAREABLE_LINK_HERE/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true"></iframe>
-            </div>
-          </div>
-          </div>
-          
-          
-     
+        <button id ="prevBtn" class="carousel-button prev">&#10094;</button>
+        <button id ="nextBtn" class="carousel-button next">&#10095;</button>
+      </div>
+
+
+      
+    </div>
+  </div>  
+  
+  <div class="ppt-container">
+  <embed src="chemin/vers/votre-fichier.pdf" type="application/pdf" width="100%" height="400px"  allow ="auto"/>
+
+</div>
 
 </section>
 <!-- work project section ends -->
+
+<!-- Modal container -->
+<div id="myModal" class="modal">
+  <!-- Close button -->
+  <span class="close">&times;</span>
+  <!-- Modal content -->
+  <img class="modal-content" id="img01">
+  <!-- Caption text -->
+  <div id="caption"></div>
+</div>
 
 <!-- scroll top btn -->
 <a href="#work" class="fas fa-angle-up" id="scroll-top"></a>

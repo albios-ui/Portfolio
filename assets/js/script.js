@@ -445,11 +445,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
   document.addEventListener('DOMContentLoaded', () => {
     const projects = [
-      { name: 'Project One', date: '2022-10', description: 'Brief description of the first project.', role: 'Developer', type: 'Web', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Two', date: '2022-11', description: 'Brief description of the second project.', role: 'Lead Developer', type: 'Backend', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Three', date: '2022-12', description: 'Brief description of the third project.', role: 'Project Manager', type: 'Fullstack', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Four', date: '2023-01', description: 'Brief description of the fourth project.', role: 'UI/UX Designer', type: 'Vue', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Five', date: '2023-02', description: 'Brief description of the fifth project.', role: 'Frontend Developer', type: 'Angular', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' }
+      { id: '1', name: 'Project One', date: '2022-10', description: 'Brief description of the first project.', role: 'Developer', type: 'Web', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { id: '2', name: 'Project Two', date: '2022-11', description: 'Brief description of the second project.', role: 'Lead Developer', type: 'Backend', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { id: '3', name: 'Project Three', date: '2022-12', description: 'Brief description of the third project.', role: 'Project Manager', type: 'Fullstack', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { id: '4', name: 'Project Four', date: '2023-01', description: 'Brief description of the fourth project.', role: 'UI/UX Designer', type: 'Vue', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { id: '5', name: 'Project Five', date: '2023-02', description: 'Brief description of the fifth project.', role: 'Frontend Developer', type: 'Angular', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' }
       // Ajoutez plus de projets ici selon vos besoins
     ];
   
@@ -475,8 +475,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="${project.codeLink}" class="project-button project-code">
                   <i class="fas fa-code"></i> Project Code
                 </a>
-                <a href="${project.liveLink}" class="project-button live-project">
-                  <i class="fas fa-external-link-alt"></i> Live Project
+                <a href="projects/Myprojects.html?project=${project.id}" class="project-button live-project">
+                  <i class="fas fa-external-link-alt"></i> View Project
                 </a>
               </div>
             </div>
@@ -484,6 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
           projectsContainer.appendChild(projectCard);
         });
     }
+    
   
     // Initialement, afficher tous les projets
     renderProjects();

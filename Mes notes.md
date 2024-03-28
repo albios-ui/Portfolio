@@ -18,4 +18,7 @@ régler le problème avec contact ( responsivité à )pourquoi pas un nouveau ty
 création d'un sharepoint 
 ajouter role pour chaque projet 
 AJOUTER LA LISTE DE TOUT MES PROJETS et les lister ! ( j'envisage qu'ils soient affiché à gauche)
-
+ajouter le bouton back to home 
+ajouter bouton : view ressource  
+ajouter une option pour agrandir mon image 
+Je veux que ça m'affiche le nombre d'images en doussous des screen sous forme de pagination 

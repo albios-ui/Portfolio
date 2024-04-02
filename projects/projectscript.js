@@ -16,6 +16,9 @@ function moveSlide(step) {
     });
 }
 
+
+  
+  
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('project'); // Obtient l'id du projet depuis l'URL
@@ -23,22 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const projects = [
         {
             id: '1',
-            type: 'Web Development',
+            title:'Mon Titre',
+            category: 'Web Development',
             year: '2022',
             team: 'Solo',
             roles: [
                 'Conception de l’interface utilisateur',
                 'Développement du front-end',
-                'Intégration avec le back-endxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+                'Intégration avec le back-endxxxxxxxxxxxxxxxxxxxccccccccccccccccccccccccccccccccccccccccccccccccccccccccccxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
             ],
             technologies: 'HTML, CSS, JavaScript, React',
             method: 'Agile',
             screenshots: ['../assets/images/screenshots.png', '../assets/images/screenshots.png'],
+            source :'https://www.matchendirect.fr',
 
         },
         {
             id: '2',
-            type: 'Backend Development',
+            title:'Mon Titre',
+            category: 'Backend Development',
             year: '2021',
             team: 'Group',
             roles: [
@@ -49,11 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: 'Node.js, Express, MongoDB',
             method: 'Waterfall',
             screenshots: ['screenshot1.jpg', 'screenshot2.jpg'],
-
+            source :'https://www.matchendirect.fr',
         },
         {
             id: '3',
-            type: 'Fullstack Development',
+            title:'Mon Titre',
+            category: 'Fullstack Development',
             year: '2020',
             team: 'Solo',
             roles: [
@@ -64,10 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: 'Vue.js, Laravel, MySQL',
             method: 'Scrum',
             screenshots: ['screenshot1.jpg', 'screenshot2.jpg'],
+            source :'https://www.matchendirect.fr',
 
             
         }
     ];
+
 
     const project = projects.find(p => p.id === projectId);
     const slideContainer = document.querySelector('.carousel-slide');
@@ -102,14 +111,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const detailsContainer = document.querySelector('.project-details .details-text ');
 
         detailsContainer.innerHTML = `
-            <h3>Titre du projet</h3>
-            <p><strong>Type du projet:</strong> ${project.type}</p>
-            <p><strong>Année:</strong> ${project.year}</p>
-            <p><strong>Projet en:</strong> ${project.team}</p>
-            <h3>Responsabilité et Rôles</h3>
+            
+            <h3>Titre du projet : ${project.title}</strong></h3>
+            <p><strong>Catégorie du projet : </strong> ${project.category}</p>
+            <p><strong>Année : </strong> ${project.year}</p>
+            <p><strong>Projet en : </strong> ${project.team}</p>
+            <h3>Responsabilité et Rôles : </h3>
             <ul>${project.roles.map(role => `<li>${role}</li>`).join('')}</ul>
-            <p><strong>Technologies utilisées:</strong> ${project.technologies}</p>
-            <p><strong>Méthode de gestion du projet:</strong> ${project.method}</p>
+            <p><strong>Technologies utilisées : </strong> ${project.technologies}</p>
+            <p><strong>Méthode de gestion du projet : </strong> ${project.method}</p>
+
+            <div class="project-links">
+                <a href="${project.source}" class="project-button project-code">
+                  <i class="fas fa-code"></i> Project Code
+                </a>
+
+              </div>
         `;
         // Gestion des captures d'écran
         slideContainer.innerHTML = project.screenshots.map(screenshot => `
@@ -141,6 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     // ... Votre code existant ...
+
+    
   
     // Afficher l'image en grand dans la modal
     const modal = document.getElementById('myModal');
@@ -163,3 +182,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
+
+
+  srtop.reveal('.work .box', { interval: 200 });
+
+  /* ===== SCROLL REVEAL ANIMATION ===== */
+const srtop = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 1000,
+    reset: true
+});
+
+/* SCROLL HOME */
+srtop.reveal('.home .content h3', { delay: 200 });
+srtop.reveal('.home .content p', { delay: 200 });
+srtop.reveal('.home .content .btn', { delay: 200 });
+
+srtop.reveal('.home .image', { delay: 400 });
+srtop.reveal('.home .linkedin', { interval: 600 });
+srtop.reveal('.home .github', { interval: 800 });
+srtop.reveal('.home .twitter', { interval: 1000 });
+srtop.reveal('.home .telegram', { interval: 600 });
+srtop.reveal('.home .instagram', { interval: 600 });
+srtop.reveal('.home .dev', { interval: 600 });
+
+/* SCROLL ABOUT */
+srtop.reveal('.about .content h3', { delay: 200 });
+srtop.reveal('.about .content .tag', { delay: 200 });
+srtop.reveal('.about .content p', { delay: 200 });
+srtop.reveal('.about .content .box-container', { delay: 200 });
+srtop.reveal('.about .content .resumebtn', { delay: 200 });
+
+
+/* SCROLL SKILLS */
+srtop.reveal('.skills .container', { interval: 200 });
+srtop.reveal('.skills .container .bar', { delay: 400 });
+
+/* SCROLL EDUCATION */
+srtop.reveal('.education .box', { interval: 200 });
+
+/* SCROLL PROJECTS */
+srtop.reveal('.work .box', { interval: 200 });
+
+/* SCROLL EXPERIENCE */
+srtop.reveal('.experience .timeline', { delay: 400 });
+srtop.reveal('.experience .timeline .container', { interval: 400 });
+
+/* SCROLL CONTACT */
+srtop.reveal('.contact .container', { delay: 400 });
+srtop.reveal('.contact .container .form-group', { delay: 400 });

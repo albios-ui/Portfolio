@@ -1,5 +1,45 @@
 $(document).ready(function () {
+   
+        // Initialisation du bouton "Tous" comme actif
+        $('.filter-btn[data-filter="all"]').addClass('active');
+    
 
+    
+        // Gestion des clics sur les boutons de filtrage
+        $('.filter-btn').click(function () {
+            // Retirer la classe 'active' de tous les boutons et l'ajouter au bouton cliqué
+            $('.filter-btn').removeClass('active');
+            $(this).addClass('active');
+    
+            // Récupérer la valeur du filtre et filtrer les projets
+            const filterValue = $(this).attr('data-filter');
+            filterProjects(filterValue);
+        });
+    
+  
+    
+        // Ajoutez ici le reste de vos interactions de page comme avant
+        // Par exemple, pour la barre de navigation, les animations, etc.
+    
+        // Exemple : Gestion du clic sur le menu pour mobile
+        $('#menu').click(function () {
+            $(this).toggleClass('fa-times');
+            $('.navbar').toggleClass('nav-toggle');
+        });
+    
+        // Exemple : Scroll smooth pour les ancres
+        $('a[href*="#"]').on('click', function (e) {
+            e.preventDefault();
+    
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top,
+            }, 500, 'linear');
+        });
+    
+        // Votre code JavaScript supplémentaire ici...
+    
+
+    
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
@@ -249,9 +289,15 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });  */
 srtop.reveal('.experience .timeline .container', { interval: 400 }); 
 
 /* SCROLL CONTACT */
- srtop.reveal('.contact .container', { delay: 400 });
-srtop.reveal('.contact .container .form-group', { delay: 400 }); 
-
+ScrollReveal().reveal('.contact .container', { 
+    duration: 1000,
+    distance: '50px',
+    easing: 'ease-in-out',
+    origin: 'bottom',
+    interval: 100
+    
+  });
+  
 
 // Partie qui permet de gérer le filtre de mes compétences et la pagination 
 
@@ -446,23 +492,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }); */
   
   document.addEventListener('DOMContentLoaded', () => {
+    
     const projects = [
-      { id: '1', name: 'Project One', date: '2022-10', description: 'Brief description of the first project.', role: 'Developer', type: 'Web', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { id: '1', name: 'Project One', date: '2022-10', description: 'Brief description of the first project.', role: 'Developer', type:'Web', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
       { id: '2', name: 'Project Two', date: '2022-11', description: 'Brief description of the second project.', role: 'Lead Developer', type: 'Backend', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
       { id: '3', name: 'Project Three', date: '2022-12', description: 'Brief description of the third project.', role: 'Project Manager', type: 'Fullstack', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { id: '4', name: 'Project Four', date: '2023-01', description: 'Brief description of the fourth project.', role: 'UI/UX Designer', type: 'Vue', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { id: '5', name: 'Project Five', date: '2023-02', description: 'Brief description of the fifth project.', role: 'Frontend Developer', type: 'Angular', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' }
+      { id: '4', name: 'Project Four', date: '2023-01', description: 'Brief description of the fourth project.', role: 'UI/UX Designer', type: '', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
+      { id: '5', name: 'Project Five', date: '2023-02', description: 'Brief description of the fifth project.', role: 'Frontend Developer', type: 'Angula', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' }
       // Ajoutez plus de projets ici selon vos besoins
     ];
   
     const projectsContainer = document.querySelector('.project-container');
     const filterButtons = document.querySelectorAll('.filter-btn');
+    
+ 
   
     function renderProjects(filter = '') {
       projectsContainer.innerHTML = ''; // Efface les projets existants avant de rerendre
       projects
-        .filter(project => filter === 'all' || project.type.includes(filter))
-        .forEach(project => {
+    
+      const filteredProjects = projects.filter(project => filter === 'all' || project.type === filter);
+    
+      filteredProjects.forEach(project => {
           const projectCard = document.createElement('div');
           projectCard.className = 'project-card';
           projectCard.innerHTML = `
@@ -489,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
   
     // Initialement, afficher tous les projets
-    renderProjects();
+    renderProjects('all');
   
     // Ajout de l'écouteur d'événements pour les boutons de filtrage
     filterButtons.forEach(button => {
@@ -499,7 +550,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const filter = button.getAttribute('data-filter');
         renderProjects(filter);
       });
-    });
+    }); 
+
+    
   });
   
 

@@ -643,6 +643,7 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
+
 }
 .skills h2 {
   color: #fff;
@@ -658,6 +659,8 @@ header .navbar ul li a:hover {
   width: 100%;
   margin: auto;
   margin-top: 2rem;
+  font-family: "Nunito", sans-serif;
+
 }
 .skills .container .row {
   display: grid;
@@ -690,9 +693,77 @@ header .navbar ul li a:hover {
 .skills .container .bar .info span {
   font-size: 2rem;
   font-weight: 500;
-  font-family: "Poppins";
+  font-family: "Nunito", sans-serif;
   margin-left: 0.5rem;
 }
+
+
+/* Filter buttons style */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family: "Nunito", sans-serif;
+
+  
+  
+}
+
+.filter-buttons .filter-btn {
+  cursor: pointer;
+  background-color: transparent; /* Adaptez cette couleur pour correspondre à votre design */
+  color: white;
+  border: 2px solid #FFFFFF; /* Bordure blanche */
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+
+
+}
+
+.filter-buttons .filter-btn:hover, .filter-buttons .filter-btn.active {
+  background-color: rgba(0, 0, 22, 0.4); /* Une teinte plus sombre pour l'effet de survol */
+  color: #fff;
+}
+
+/* Début Pagination buttons style */
+.pagination {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrer la pagination horizontalement */
+  padding: 10px 0; /* Ajouter un peu d'espace autour de la pagination */
+}
+
+.pagination .page-btn, .pagination .prev-btn, .pagination .next-btn {
+  cursor: pointer;
+  padding: 8px 16px; /* Ajustez l'espacement interne */
+  margin: 0 5px; /* Espacer les boutons */
+  background-color: transparent; /* Fond transparent pour commencer */
+  color: #FFFFFF; /* Texte blanc */
+  border: 2px solid #FFFFFF; /* Bordure blanche */
+  border-radius: 5px; /* Bords arrondis */
+  transition: background-color 0.3s, color 0.3s; /* Transition pour effet au survol */
+  font-size: 16px; /* Taille du texte */
+}
+
+.pagination .page-btn:hover, .pagination .prev-btn:hover, .pagination .next-btn:hover {
+  background-color: #FFFFFF; /* Fond blanc au survol */
+  color: #000000; /* Texte noir au survol */
+}
+
+.pagination .page-btn.active {
+  background-color: #FFFFFF; /* Fond blanc pour la page active */
+  color: #000000; /* Texte noir pour la page active */
+  pointer-events: none; /* Désactiver les événements de pointage pour la page active */
+}
+
+
+
+
+/* Fin Pagination buttons style */
+
 /* skills media queries starts*/
 
 
@@ -845,7 +916,7 @@ header .navbar ul li a:hover {
 
 /* Section de travail commence */
 .work {
-  background-color: #e0f7fa;
+  background-color: #93e2ec;
   padding: 40px 0;
   text-align: center;
 }
@@ -925,10 +996,11 @@ text-align: left;
   border-radius: 5px;
   text-decoration: none;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #e3e5e6;
   min-width: 120px;
   font-weight: bold;
 }
+
 
 /* Ajustement pour les tablettes */
 @media screen and (max-width: 1024px) {
@@ -973,24 +1045,32 @@ l
 }
 
 .filter-btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
   cursor: pointer;
-  margin: 5px;
-  transition: background-color 0.3s, transform 0.3s;
-  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  background-color: #2506ad;
+  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   margin-top: 50px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+
+
 }
 
 .filter-btn:hover {
-  background-color: #45a049;
+  background-color: #1a047e;
   transform: scale(1.1);
 }
 
 .filter-btn.active {
-  background-color: #316a3e;
+  background-color: rgb(24, 2, 63);
 }
 
 @media (max-width: 768px) {
@@ -1012,6 +1092,8 @@ l
     margin-bottom: 10px; /* Espacement supplémentaire en bas */
   }
 }
+
+
 /* work section ends */
 
 
@@ -1144,7 +1226,7 @@ l
   background: #e5ecfb;
   min-height: 60vh;
 }
-.contact .container {
+.contact .contact-container {
   max-width: 1050px;
   width: 100%;
   background: #fff;
@@ -1152,7 +1234,7 @@ l
   margin: 2rem auto;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.contact .container .content {
+.contact .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1280,7 +1362,7 @@ form .button-area {
 /* contact section media queries starts */
 /* Responsivité ajoutée à votre CSS existant */
 @media (max-width: 992px) {
-  .contact .container,
+  
   .contact .content .image-box,
   .contact .content form {
       width: 100%; /* Pleine largeur */
@@ -1290,9 +1372,7 @@ form .button-area {
 }
 
 @media (max-width: 768px) {
-  .contact .container {
-      margin: 20px; /* Espace autour du conteneur */
-  }
+
   .contact .content {
       flex-direction: column; /* Elements empilés verticalement */
   }
@@ -1303,7 +1383,7 @@ form .button-area {
 
 /* Réduire encore plus l'espacement pour les très petits appareils */
 @media (max-width: 576px) {
-  .contact .container .content {
+  .contact .content {
       padding: 10px; /* Espacement interne réduit */
   }
 }
@@ -1449,75 +1529,20 @@ form .button-area {
 /* scroll top ends */
 
 
-/* Filter buttons style */
-.filter-buttons {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.filter-buttons .filter-btn {
-  cursor: pointer;
-  background-color: #57059e; /* Adaptez cette couleur pour correspondre à votre design */
-  color: white;
-  border: 1px solid transparent;
-  padding: 10px 20px;
-  margin: 0 5px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.filter-buttons .filter-btn:hover, .filter-buttons .filter-btn.active {
-  background-color: #4a00e0; /* Une teinte plus sombre pour l'effet de survol */
-  color: #fff;
-}
-
-/* Début Pagination buttons style */
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centrer la pagination horizontalement */
-  padding: 10px 0; /* Ajouter un peu d'espace autour de la pagination */
-}
-
-.pagination .page-btn, .pagination .prev-btn, .pagination .next-btn {
-  cursor: pointer;
-  padding: 8px 16px; /* Ajustez l'espacement interne */
-  margin: 0 5px; /* Espacer les boutons */
-  background-color: transparent; /* Fond transparent pour commencer */
-  color: #FFFFFF; /* Texte blanc */
-  border: 2px solid #FFFFFF; /* Bordure blanche */
-  border-radius: 20px; /* Bords arrondis */
-  transition: background-color 0.3s, color 0.3s; /* Transition pour effet au survol */
-  font-size: 16px; /* Taille du texte */
-}
-
-.pagination .page-btn:hover, .pagination .prev-btn:hover, .pagination .next-btn:hover {
-  background-color: #FFFFFF; /* Fond blanc au survol */
-  color: #000000; /* Texte noir au survol */
-}
-
-.pagination .page-btn.active {
-  background-color: #FFFFFF; /* Fond blanc pour la page active */
-  color: #000000; /* Texte noir pour la page active */
-  pointer-events: none; /* Désactiver les événements de pointage pour la page active */
-}
-
-
-
-
-/* Fin Pagination buttons style */
-
 
 .github-star {
   display: inline-flex;
   align-items: center;
-  background-color: #007bff;
+  background-color: #2506ad;
+ box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+
   color: white;
   text-decoration: none;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 5px;
   transition: background-color 0.3s;
   font-weight: 500; /* Adjust based on your preference */
+  font-size: 1.8rem;
 }
 
 .github-star i {
@@ -1529,7 +1554,7 @@ form .button-area {
 }
 
 .github-star:hover {
-  background-color: #0056b3;
+  background-color: #1a047e;
 }
 
 .github-star:hover i {
@@ -1583,12 +1608,12 @@ form .button-area {
 
 /* Separate styles for the Live Project button */
 .live-project {
-  color: #008CBA; /* Initial color for live project text */
-  border-color: #008CBA; /* Border color matches text */
+  color: #2506ad; /* Initial color for live project text */
+  border-color: #2506ad; /* Border color matches text */
 }
 
 .live-project:hover {
-  background-color: #008CBA; /* Blue background on hover */
+  background-color: #2506ad; /* Blue background on hover */
 }
 
 /* Adding 'after' pseudo-element for a fill effect */

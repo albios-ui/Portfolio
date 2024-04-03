@@ -73,6 +73,7 @@ header {
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
+
 section {
   min-height: 100vh;
   padding: 2rem 9%;
@@ -1108,21 +1109,7 @@ l
 }
 
 /* Responsivité */
-@media (max-width: 1024px) {
-  .experience-item {
-      flex-direction: column;
-      align-items: start;
-  }
 
-  .experience-logo {
-      margin-right: 0;
-      margin-bottom: 15px;
-  }
-
-  .experience-content {
-      text-align: left;
-  }
-}
 
 @media (max-width: 768px) {
   .experience-section {
@@ -1162,7 +1149,7 @@ l
   width: 100%;
   background: #fff;
   border-radius: 1.5rem;
-  margin: 2rem 5rem;
+  margin: 2rem auto;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 .contact .container .content {
@@ -1292,50 +1279,32 @@ form .button-area {
 }
 /* contact section media queries starts */
 /* Responsivité ajoutée à votre CSS existant */
-@media (min-width: 1201px) {
-  .contact .container {
-    max-width: 1200px; /* ou la largeur maximale que vous souhaitez */
-    margin: 2rem auto; /* Centrer le conteneur */
-  }
-}
-
-@media (max-width: 1200px) {
-  .contact .container {
-      padding: 2rem; /* Ajustement de l'espacement */
-  }
-}
-
 @media (max-width: 992px) {
-  .contact .container {
-      padding: 2rem 1rem; /* Réduction de l'espacement pour les tablettes */
-  }
+  .contact .container,
   .contact .content .image-box,
   .contact .content form {
-      width: 100%; /* Pleine largeur pour les éléments dans les petites tablettes */
-      margin-top: 20px;
+      width: 100%; /* Pleine largeur */
+      padding: 20px; /* Ajustez l'espacement si nécessaire */
+      margin-top: 20px auto; /* Espace entre les éléments */
   }
 }
 
 @media (max-width: 768px) {
   .contact .container {
-      width: auto; /* Pleine largeur pour les dispositifs mobiles */
-      margin: 20px; /* Petit espacement autour du conteneur */
+      margin: 20px; /* Espace autour du conteneur */
   }
   .contact .content {
-      flex-direction: column; /* Empile les éléments verticalement sur les mobiles */
+      flex-direction: column; /* Elements empilés verticalement */
   }
   .contact .content .image-box img {
-      max-width: 80%; /* Réduction de la taille de l'image sur les mobiles */
-      margin: 0 auto; /* Centrer l'image */
+      max-width: 100%; /* Image en pleine largeur */
   }
 }
 
+/* Réduire encore plus l'espacement pour les très petits appareils */
 @media (max-width: 576px) {
   .contact .container .content {
-      padding: 1rem; /* Espacement réduit pour les très petits dispositifs */
-  }
-  .contact .content .image-box img {
-      max-width: 100%; /* Utilise toute la largeur disponible */
+      padding: 10px; /* Espacement interne réduit */
   }
 }
 

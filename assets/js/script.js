@@ -276,7 +276,7 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });  */
 
 
 /* SCROLL SKILLS */
- srtop.reveal('.skills .container', { interval: 200 });
+ srtop.reveal('.skills', { interval: 200 });
 
 /* SCROLL EDUCATION */
 /* srtop.reveal('.education .box', { interval: 200 });
@@ -304,41 +304,46 @@ ScrollReveal().reveal('.contact .container', {
 
 document.addEventListener('DOMContentLoaded', () => {
     const skills = [
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        { name: 'Adobe XD', category: 'design', imageUrl: 'https://img.icons8.com/color/48/000000/adobe-xd.png' },
-        // Ajoutez d'autres objets de compétences ici...
+        { name: 'Hopex', category: 'outils', imageUrl: 'https://img.icons8.com/ios-filled/48/mega-nz.png' },
+        { name: 'GitHub', category: 'outils', imageUrl: 'https://img.icons8.com/color-glass/48/000000/github--v1.png' },
+        { name: 'Postman', category: 'outils', imageUrl: 'https://img.icons8.com/dusk/48/postman-api.png' },
+        { name: 'PowerBi', category: 'outils', imageUrl: 'https://img.icons8.com/color/48/power-bi.png' },
+        { name: 'Python', category: 'langage', imageUrl: 'https://img.icons8.com/color/48/python--v1.png' },
+
+        { name: 'HTML5', category: 'dev web', imageUrl: 'https://img.icons8.com/color/48/html-5--v1.png' },
+        { name: 'CSS3', category: 'dev web', imageUrl: 'https://img.icons8.com/color/48/css3.png' },
+        { name: 'JS', category: 'dev web', imageUrl: 'https://img.icons8.com/color/48/javascript--v1.png' },
+        { name: 'Symfony(PHP)', category: 'dev web', imageUrl: 'https://img.icons8.com/nolan/48/symfony.png' },
+        { name: 'GraphQl', category: 'dev web', imageUrl: 'https://img.icons8.com/color/48/graphql.png ' },
+        { name: 'VueJS', category: 'dev web', imageUrl: 'https://img.icons8.com/fluency/48/vuejs.png ' },
+        { name: 'ReactJS', category: 'dev web', imageUrl: 'https://img.icons8.com/offices/48/react.png ' },
+        { name: 'D3JS', category: 'dev web', imageUrl: 'https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-d3js-a-javascript-library-for-producing-dynamic-interactive-data-visualizations-in-web-browsers-logo-color-tal-revivo.png ' },
+        { name: 'Flutter', category: 'dev mobile', imageUrl: ' https://img.icons8.com/color/48/flutter.png' },
+        { name: 'MySQL', category: 'sgbd', imageUrl: 'https://img.icons8.com/fluency/48/mysql-logo.png ' },
+        { name: 'PostgreSQL', category: 'sgbd', imageUrl: ' https://img.icons8.com/color/48/postgreesql.png' },
+       
+        { name: 'Cahier des charges', category: 'gl', imageUrl: 'https://img.icons8.com/office/48/test-passed.png' },
+        { name: 'Uml', category: 'modelisation', imageUrl: 'https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/48/external-diagram-interface-kiranshastry-gradient-kiranshastry.png ' },
+        { name: 'Merise', category: 'modelisation', imageUrl: 'https://img.icons8.com/external-sbts2018-outline-color-sbts2018/48/external-projects-basic-ui-elements-2.2-sbts2018-outline-color-sbts2018.png ' },
+        { name: 'BPMN', category: 'modelisation', imageUrl: 'https://img.icons8.com/fluency/48/creating.png ' },
+        { name: 'SCRUM', category: 'gestion de projets', imageUrl: 'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/48/external-scrum-agile-flaticons-lineal-color-flat-icons-6.png ' },
+        { name: 'Notion', category: 'gestion de projets', imageUrl: 'https://img.icons8.com/plasticine/48/notion.png ' },
+        { name: 'JIRA', category: 'gestion de projets', imageUrl: 'https://img.icons8.com/color/48/jira.png ' },
+        { name: 'Confluence', category: 'gestion de projets', imageUrl: 'https://img.icons8.com/fluency/48/confluence.png ' },
+        { name: 'Trello', category: 'gestion de projets', imageUrl: 'https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-trello-a-web-based-list-making-application-for-multi-platform-logo-color-tal-revivo.png ' },
+        { name: 'MsProject', category: 'gestion de projets', imageUrl: ' https://img.icons8.com/color/48/ms-project.png' },
+
+        { name: 'Photoshop', category: 'design', imageUrl: 'https://img.icons8.com/color/48/adobe-photoshop--v1.png ' },
+        { name: 'Figma', category: 'design', imageUrl: 'https://img.icons8.com/color/48/figma--v1.png ' },
+        { name: 'Mockflow', category: 'design', imageUrl: 'https://img.icons8.com/color/48/slide-layout.png ' },
+        { name: 'Word', category: 'bureatique', imageUrl: 'https://img.icons8.com/color/48/ms-word.png ' },
+        { name: 'Excel', category: 'bureautique', imageUrl: 'https://img.icons8.com/color/48/ms-excel.png ' },
+        { name: 'PowerPoint', category: 'bureautique', imageUrl: 'https://img.icons8.com/color/48/ms-powerpoint--v1.png ' },
+        { name: 'SharePoint', category: 'bureautique', imageUrl: 'https://img.icons8.com/color/48/microsoft-sharepoint-2019.png ' },
     ];
 
     let filteredSkills = [...skills];
-    const skillsPerPage = 12;
+    const skillsPerPage = 24;
     let currentPage = 1;
 
     const skillsContainer = document.getElementById('skillsContainer');

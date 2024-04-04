@@ -533,11 +533,15 @@ header .navbar ul li a:hover {
 .about .row .content h3 {
   color: rgb(27, 27, 27);
   font-size: 2.5rem;
+  
 }
+
+
+
 .about .row .content .tag {
   font-size: 1.4rem;
   color: #020133;
-  font-weight: 600;
+  font-weight: bolder;
   margin-top: 1rem;
 }
 .about .row .content p {
@@ -559,6 +563,7 @@ header .navbar ul li a:hover {
 }
 .about .row .content .box-container .box p span {
   color: #011aff;
+  font-weight: bolder;
 }
 .resumebtn {
   margin-top: 6rem;
@@ -974,12 +979,24 @@ text-align: left;
 .work .project-card img {
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .work .project-info {
   text-align: left;
+  margin-bottom: 5px;
 }
+
+.work .project-info p
+ {
+  font-weight: bold;
+}
+
+.work .project-info p span
+ {
+  font-weight: normal;
+}
+
 
 .work .project-links {
   display: flex;
@@ -999,6 +1016,8 @@ text-align: left;
   background-color: #e3e5e6;
   min-width: 120px;
   font-weight: bold;
+  margin-top: 5px;
+  
 }
 
 
@@ -1099,17 +1118,29 @@ l
 
 /*experience section debut */
 .experience-section {
-  background-color: #f8f8f8;
-  padding: 50px 5%;
+  background: linear-gradient(to bottom, #010136, #00003a);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 13px;
+  font-family: "Nunito", sans-serif;
+  text-transform :uppercase;
+ 
+}
 
+.experience-section .heading {
+  color: white;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.experience-section .heading span{
+  color:  rgb(255, 230, 0);
 }
 
 .experience-container {
   max-width: 1000px; /* Modifié pour réduire la largeur totale */
   margin: auto;
   padding: 20px; /* Ajouté pour assurer un espacement interne */
+   
 }
 
 .experience-title {
@@ -1133,10 +1164,7 @@ l
   width: 100%; /* S'assure que l'élément occupe toute la largeur du conteneur */
 }
 
-.experience-item:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-}
+
 
 .experience-logo {
   flex-shrink: 0;
@@ -1162,32 +1190,73 @@ l
 
 .experience-period {
   font-weight: bold;
-  color: #6c757d;
+  font-size: 13px;
+  color: #011affb9;
+  
 }
 
 .experience-job-title {
-  color: #495057;
+  color: #0E2431;
   margin: 10px 0 5px;
+  font-weight: bolder;
 }
 
 .experience-company {
-  color: #6c757d;
+  color: #011affb9;
   font-style: italic;
   margin-bottom: 10px;
+  font-weight: bolder;
+  font-size: 13px;
+  text-indent: 30px;
+
 }
 
 .experience-details {
   list-style: none;
   padding: 0;
+  font-weight: bolder;
+  text-indent: -20px;
+
 }
+
 
 .experience-missions {
   list-style: inside disc;
   margin-top: 10px;
+  font-weight: bolder;
+  text-transform : none;
 }
 
 .experience-missions li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  list-style-position: inside;
+  line-height: 1.6;
+  font-weight: bolder;
+  text-transform : none;
+  
+
+}
+
+.experience-details h4{
+  color: #011aff;
+  font-weight: bolder;
+  text-transform : none;
+  
+}
+.experience-details span { 
+  font-weight: bolder;
+  color: #0E2431;
+  text-transform : none;
+}
+.experience-details ul {
+  margin-bottom: 8px;
+  margin-left: 20px;
+  list-style-position: inside;
+  line-height: 1.6;
+  margin-top: 8px;
+  font-weight: bolder;
+  text-transform : none;
 }
 
 /* Responsivité */

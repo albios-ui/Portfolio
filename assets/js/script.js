@@ -111,7 +111,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Chef de projet AMOA", "Architecte solution SI", "Business Analayst", "Consultant en transformation digitale"],
+    strings: ["L'assistance à Maitrise D'Ouvrage [AMOA]","La Chefferie De projet SI", "L'Architecture Et Urbanisation SI", "la transformation digitale"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -518,19 +518,21 @@ document.addEventListener('DOMContentLoaded', () => {
           projectCard.className = 'project-card';
           projectCard.innerHTML = `
             <img src="${project.imageUrl}" alt="${project.name}" style="width:100%; height:auto; border-radius: 5px;">
+
             <div class="project-info">
               <h3>${project.name}</h3>
               <span>${project.date}</span>
               <p>${project.description}</p>
-              <p>Role: ${project.role}</p>
-              <p>Type: ${project.type}</p>
+              <p>Role: <span>  ${project.role}<span> </p>
+              <p>Type: <span> ${project.type}<span> </p>
               <div class="project-links">
-                <a href="${project.codeLink}" class="project-button project-code">
+                <a href="${project.codeLink}" class="project-button project-code" target="_blank">
                   <i class="fas fa-code"></i> Project Code
                 </a>
-                <a href="projects/Myprojects.html?project=${project.id}" class="project-button live-project">
+                <a href="projects/Myprojects.html?project=${project.id}" class="project-button live-project" target="_blank">
                   <i class="fas fa-external-link-alt"></i> View Project
                 </a>
+
               </div>
             </div>
           `;

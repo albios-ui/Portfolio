@@ -40,10 +40,7 @@ $(document).ready(function () {
     
 
     
-    $('#menu').click(function () {
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+
 
     $(window).on('scroll load', function () {
         $('#menu').removeClass('fa-times');
@@ -491,17 +488,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', () => {
     
     const projects = [
-        { id: '8', name: 'KIABI', date: '2024-03', Titre: "Stratégie Numérique pour l'Amélioration de l'Expérience Client chez Kiabi", type:'Transformation Digitale', imageUrl: 'assets/images/projects/KIABI.jpg',  },
-        { id: '7', name: 'Traitement du Langage Naturel (NLP)', date: '2024-02', Titre: "Optimisation d’itinéraires de voyages - (NLTK)", type:'IA', imageUrl: 'assets/images/projects/IA.png', codeLink: '#', liveLink: '#' },
-        { id: '9', name: 'Projet de Fin d’études – DineInVR ', date: '2024-05', Titre: 'DineIn VR - Révolution Culinaire via Réalité Augmentée ', type:'Transformation Digitale', imageUrl: 'assets/images/projects/vr3.png', codeLink: '#', liveLink: '#' },
-        { id: '6', name: "Réponse D'appel D'offre : FINTECH", date: '2023-07', Titre: "Modernisation de l'Assurance à responsabilité Civile de l’organisme public Transport for London", type:'Transformation Digitale', imageUrl: 'assets/images/projects/TFL.jpg', codeLink: '#', liveLink: '#' },
-        { id: '5', name: "Réponse D'appel D'offre : GREENTECH", date: '2023-07', Titre: " Innovation technologiques des Cultures de Vignes - Réponse à l'Appel d'Offre du syndicat des Vignerons Indépendants de France", type:'Transformation Digitale', imageUrl: 'assets/images/projects/vignes.jpg', codeLink: '#', liveLink: '#' },
-        { id: '4', name: 'Dossier Médical Partagé (DMP)', date: '2023-06', Titre: 'Implémentation du Dossier Médical Partagé - Vers une Santé Numérique Intégrée', type:'Transformation Digitale', imageUrl: 'assets/images/projects/Dossier-medical.jpeg', codeLink: '#', liveLink: '#' },
-        { id: '3', name: 'PICTS MANAGER', date: '2023-02', Titre: "Application mobile de gestion d'images  ", type:'Développement Mobile', imageUrl: 'assets/images/projects/1280_alt_portail_36990_design-app-mobile.jpg', codeLink: '#', liveLink: '#' },
-        { id: '2', name: 'Gotham', date: '2023-02', Titre: 'Transformation Digitale pour la gestion de déchets de Gotham City', type:'Transformation Digitale', imageUrl: 'assets/images/projects/Note-de-veille-Gestion-intelligente-des-dechets-et-Smart-City.png', codeLink: '#', liveLink: '#' },
-        { id: '1', name: 'Time Manager', date: '2022-11', Titre: "Application de Gestion de Tâches", type:'Développement Web', imageUrl: 'assets/images/projects/maxresdefault.jpg', codeLink: '#', liveLink: '#' },
-        { id: '10', name: 'Infrastructure Réseau ', date: '2021-05', Titre:"Mise en place d’une infrastructure réseau sans fil pour le département d’Informatique de l’UMMTO.", type:'Étude de faisabilité', imageUrl: 'assets/images/projects/network_infrastructure.jpg', codeLink: '#', liveLink: '#' },
-        { id: '11', name: 'Smartech', date: '2020-07', Titre: 'Site e-commerce de vente de vêtements en ligne', type:'Développement Web', imageUrl: 'assets/images/projects/1641689-full.jpg', codeLink: '#', liveLink: '#' },
+        { id: '8', name: 'KIABI', date: '2024-03', Titre: "Stratégie Numérique pour l'Amélioration de l'Expérience Client chez Kiabi", type:'Transformation Digitale', imageUrl: 'assets/images/projects/KIABI.jpg',codeLink:"https://github.com/albios-ui/Transformation-Digitale-KIABI"  },
+        { id: '7', name: 'Traitement du Langage Naturel (NLP)', date: '2024-02', Titre: "Optimisation d’itinéraires de voyages - (NLTK)", type:'IA', imageUrl: 'assets/images/projects/IA.png', codeLink: 'https://github.com/albios-ui/Traitement-Du-Langage-Naturel-NLP-', liveLink: '#' },
+        { id: '9', name: 'Projet de Fin d’études – DineInVR ', date: '2024-05', Titre: 'DineIn VR - Révolution Culinaire via Réalité Augmentée ', type:'Transformation Digitale', imageUrl: 'assets/images/projects/vr3.png', codeLink: 'https://github.com/albios-ui/Projet-De-Fin-D-tudes-DineInVR', liveLink: '#' },
+        { id: '6', name: "Réponse D'appel D'offre : FINTECH", date: '2023-07', Titre: "Modernisation de l'Assurance à responsabilité Civile de l’organisme public Transport for London", type:'Transformation Digitale', imageUrl: 'assets/images/projects/TFL.jpg', codeLink: 'https://github.com/albios-ui/R-ponse-D-appel-D-offre-FINTECH', liveLink: '#' },
+        { id: '5', name: "Réponse D'appel D'offre : GREENTECH", date: '2023-07', Titre: " Innovation technologiques des Cultures de Vignes - Réponse à l'Appel d'Offre du syndicat des Vignerons Indépendants de France", type:'Transformation Digitale', imageUrl: 'assets/images/projects/vignes.jpg', codeLink: 'https://github.com/albios-ui/R-ponse-D-appel-D-offre-GREENTECH', liveLink: '#' },
+        { id: '4', name: 'Dossier Médical Partagé (DMP)', date: '2023-06', Titre: 'Implémentation du Dossier Médical Partagé - Vers une Santé Numérique Intégrée', type:'Transformation Digitale', imageUrl: 'assets/images/projects/Dossier-medical.jpeg', codeLink: 'https://github.com/albios-ui/Dossier-M-dical-Partag-DMP-', liveLink: '#' },
+        { id: '3', name: 'PICTS MANAGER', date: '2023-02', Titre: "Application mobile de gestion d'images  ", type:'Développement Mobile', imageUrl: 'assets/images/projects/1280_alt_portail_36990_design-app-mobile.jpg', codeLink: 'https://github.com/albios-ui/PICTS-MANAGER', liveLink: '#' },
+        { id: '2', name: 'Gotham', date: '2023-02', Titre: 'Transformation Digitale pour la gestion de déchets de Gotham City', type:'Transformation Digitale', imageUrl: 'assets/images/projects/Note-de-veille-Gestion-intelligente-des-dechets-et-Smart-City.png', codeLink: 'https://github.com/albios-ui/Gotham', liveLink: '#' },
+        { id: '1', name: 'Time Manager', date: '2022-11', Titre: "Application de Gestion de Tâches", type:'Développement Web', imageUrl: 'assets/images/projects/maxresdefault.jpg', codeLink: 'https://github.com/albios-ui/Time-Manager', liveLink: '#' },
+        { id: '10', name: 'Infrastructure Réseau ', date: '2021-05', Titre:"Mise en place d’une infrastructure réseau sans fil pour le département d’Informatique de l’UMMTO.", type:'Étude de faisabilité', imageUrl: 'assets/images/projects/network_infrastructure.jpg', codeLink: 'https://github.com/albios-ui/Infrastructure-R-seau', liveLink: '#' },
+        { id: '11', name: 'Smartech', date: '2020-07', Titre: 'Site e-commerce de vente de vêtements en ligne', type:'Développement Web', imageUrl: 'assets/images/projects/1641689-full.jpg', codeLink: 'https://github.com/albios-ui/Smartech', liveLink: '#' },
       // Ajoutez plus de projets ici selon vos besoins
     ];
   

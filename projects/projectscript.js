@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             method: 'Agile Scrum',
             abilities:"Persévérance, Autonomie, Adaptabilité",
             screenshots: ['../assets/images/projects/maxresdefault.jpg'],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/Time-Manager',
 
         },
         {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             abilities:"Gestion de projet, adaptation technologique, innovation en services publics, gestion de la résistance au changement",
 
             screenshots: ['../assets/images/projects/gotham4.jpg', '../assets/images/projects/gotham1.png', '../assets/images/projects/gotham2.png','../assets/images/projects/gotham3.jpg'],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/Gotham',
             
         },
         {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             method:"Agile Scrum",
             abilities:"Développement Full-Stack, Gestion de Base de Données.",
             screenshots: ['../assets/images/projects/pict1.png','../assets/images/projects/pict2.png','../assets/images/projects/pict3.png','../assets/images/projects/pict4.png',],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/PICTS-MANAGER',
 
             
         },
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             method: 'Agile Scrum',
             abilities:"Gestion de projet de santé numérique, Stratégies pour surmonter la résistance au changement",
             screenshots: ['../assets/images/projects/dmp1.png', '../assets/images/projects/dmp2.png','../assets/images/projects/dmp3.png','../assets/images/projects/dmp4.png','../assets/images/projects/dmp5.png'],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/Dossier-M-dical-Partag-DMP-',
 
             
         },        {
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "Github, Notion, MsProject",
             method: 'Agile Scrum',
             screenshots: ['../assets/images/projects/greentech1.jpg','../assets/images/projects/greentech2.jpeg','../assets/images/projects/greentech3.jpg','../assets/images/projects/greentech4.jpg','../assets/images/projects/greentech5.png'],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/R-ponse-D-appel-D-offre-GREENTECH',
 
             
         },        {
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "Github, Notion, MsProject",
             method: 'Agile Scrum',
             screenshots: ['../assets/images/projects/tfl1.jpg'],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/R-ponse-D-appel-D-offre-FINTECH',
 
             
         },        {
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title:"Optimisation d’itinéraires de voyages - Natural Language Processing for Travel Itineraries( NLTK)",
             category: "IA",
             year: "2024",
-            team: 'Groupe',
+            team: 'Groupe / 3 Mois',
             roles: [
                 "Implémentation de méthodes NLP l'interprétation précise de commandes de voyage en langage naturel",
                 "Utilisation de l'algorithme de Dijkstra pour optimiser les itinéraires de voyage",
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "Python, PyQT, NLTK, Djikstra, Notion",
             method: 'Agile Scrum',
             screenshots: ['../assets/images/projects/ia1.png', '../assets/images/projects/ia2.png'],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/Traitement-Du-Langage-Naturel-NLP-',
 
             
         },        {
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title:"Stratégie Numérique pour l'Amélioration de l'Expérience Client chez Kiabi",
             category: "Ttransformation Digitale",
             year: "2024",
-            team: 'Solo / 4 Mois',
+            team: 'Groupe / 4 Mois',
             roles: [
                 "Analyse approfondie des données clients de Kiabi et identification des tendances de marché pour guider la stratégie digitale",
                 "Développement d'une stratégie globale pour améliorer la valeur ajoutée de Kiabi via le digital",
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
             method: 'Agile Scrum',
             
             screenshots: ['../assets/images/projects/kiabi1.png','../assets/images/projects/kiabi2.jpg','../assets/images/projects/kiabi3.jpg',],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/Transformation-Digitale-KIABI',
 
             
         },        {
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "Notion",
             method: 'Agile Scrum',
             screenshots: ['../assets/images/projects/menu.png','../assets/images/projects/vr1.png','../assets/images/projects/vr2.png',],
-            source :'#',
+            source :'https://github.com/albios-ui/Projet-De-Fin-D-tudes-DineInVR',
 
             
         },        {
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             abilities:"Autonomie, Persévérance",
             screenshots: ['../assets/images/projects/réseau.png'],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/Infrastructure-R-seau',
 
             
         },        {
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             technologies: "HTML,CSS,JS,PHP",
             screenshots: ['../assets/images/projects/ummto1.png','../assets/images/projects/ummto2.png','../assets/images/projects/ummto3.png','../assets/images/projects/ummto4.png'],
-            source :'https://www.matchendirect.fr',
+            source :'https://github.com/albios-ui/Smartech',
 
             
         },
@@ -398,3 +398,9 @@ srtop.reveal('.experience .timeline', { delay: 400 });
 
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
+
+
+$('#menu').click(function () {
+    $(this).toggleClass('fa-times');
+    $('.navbar').toggleClass('nav-toggle');
+});

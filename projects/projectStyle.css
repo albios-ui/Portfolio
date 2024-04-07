@@ -382,13 +382,17 @@ header .navbar ul li a:hover{
   display: block;
 }
 
-@media (max-width: 768px) {
-  /* Adaptations pour les appareils mobiles */
-  .carousel-button {
-    padding: 5px;
+/* Règles supplémentaires pour les très petits écrans, comme les téléphones en mode portrait */
+@media (max-width: 480px) {
+  .carousel-slide img {
+    max-height: 150px; /* Hauteur encore plus réduite pour les très petits écrans */
+  }
+
+  /* Ajustements supplémentaires de la taille de la police si nécessaire */
+  .details-text h3, .details-text p, .details-text span, .details-text ul, .details-text li {
+    font-size: 10px; /* Réduction supplémentaire de la taille de la police pour les très petits écrans */
   }
 }
-
 
 .details-text {
   font-size: 13px;
@@ -443,17 +447,31 @@ header .navbar ul li a:hover{
 
 
 /* Modifications pour la responsivité */
+
+/* Règles de responsivité pour les tablettes et les téléphones */
 @media (max-width: 768px) {
-  .project-details {
-    flex-direction: column;
-  }
-
-  .details-text, .screenshots-container {
+  .project-details, .details-text {
     width: 100%;
+    padding: 15px; /* Ajustement de l'espacement pour les petits écrans */
+    flex-direction: column; /* Optionnel, si vous voulez empiler verticalement les éléments */
   }
 
-  .ppt-container iframe {
-    height: 300px; /* Adjust height for smaller devices */
+  .carousel-container {
+    height: auto; /* Permet au carrousel de s'adapter à la hauteur de l'image */
+  }
+
+  .carousel-slide img {
+    max-height: 200px; /* Ajustement de la hauteur maximale des images pour les petits écrans */
+  }
+
+  .details-text h3, .details-text p, .details-text span, .details-text ul, .details-text li {
+    font-size: 12px; /* Ajustement de la taille de la police pour les petits écrans */
+  }
+
+  .ppt-container, .ppt-container iframe {
+    width: 100%; /* Assure que le conteneur s'adapte à la largeur de l'écran */
+    height: auto; /* Ajustement de la hauteur */
+    max-width: none; /* Permet au conteneur de s'étendre pleinement */
   }
 }
 

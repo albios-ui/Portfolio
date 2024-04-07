@@ -753,17 +753,22 @@ header .navbar ul li a:hover {
   border-radius: 5px; /* Bords arrondis */
   transition: background-color 0.3s, color 0.3s; /* Transition pour effet au survol */
   font-size: 16px; /* Taille du texte */
+
 }
+
+
 
 .pagination .page-btn:hover, .pagination .prev-btn:hover, .pagination .next-btn:hover {
   background-color: #FFFFFF; /* Fond blanc au survol */
   color: #000000; /* Texte noir au survol */
+
 }
 
 .pagination .page-btn.active {
   background-color: #FFFFFF; /* Fond blanc pour la page active */
   color: #000000; /* Texte noir pour la page active */
   pointer-events: none; /* Désactiver les événements de pointage pour la page active */
+
 }
 
 
@@ -951,7 +956,7 @@ text-align: left;
 
 .projects-illustration {
   flex: 1;
-  max-width: 50%;
+  max-width: 30%;
 }
 
 /* Section de travail finit */
@@ -967,26 +972,39 @@ text-align: left;
 
 .work .project-card {
   margin: 20px;
-  background: white;
+  background: rgb(249, 249, 249);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  align-items: center;
   transition: transform 0.3s ease;
-  width: calc(33.333% - 40px); /* Définition initiale pour les écrans larges */
+  width: calc(33.333% - 40px); /* Ajustez selon le besoin, enlevez la déclaration redondante */
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
 }
 
+.work .project-card:hover {
+transform: scale(1.03);
+box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+}
 .work .project-card img {
   width: 100%;
-  height: auto;
+  height: 200px; /* S'adapte au ratio d'aspect */
+  object-fit: cover; /* Couvre l'espace disponible sans perdre le ratio */
   margin-bottom: 10px;
 }
 
 .work .project-info {
   text-align: left;
   margin-bottom: 5px;
+  color: #0E2431;
+position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between,
 }
 
 .work .project-info p
@@ -1001,8 +1019,9 @@ text-align: left;
 
 
 .work .project-links {
+  margin-top: auto;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   gap: 10px;
 }
 
@@ -1019,6 +1038,9 @@ text-align: left;
   min-width: 120px;
   font-weight: bold;
   margin-top: 5px;
+  
+  
+  
   
 }
 
@@ -1043,17 +1065,20 @@ text-align: left;
   }
 
   .work .project-card {
-    width: calc(100% - 40px);
+    width: calc(85% - 40px);
   }
+
+
 }
 
 /* Ajustements supplémentaires pour les très petits appareils */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
   .work .project-card {
-    width: calc(100% - 20px);
+    width: calc(80% - 40px);
   }
+
 }
-l
+
 /* Styles de base, comme précédemment */
 
 
@@ -1144,6 +1169,11 @@ l
   padding: 20px; /* Ajouté pour assurer un espacement interne */
    
 }
+
+.experience-section .experience-item:hover{
+  transform: scale(1.03);
+  box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+  }
 
 .experience-title {
   color: #2a3f54;
@@ -1295,7 +1325,7 @@ l
 /* experience section ends */
 
 /* contact section starts */
-.contact {
+/* .contact {
   background: #e5ecfb;
   min-height: 60vh;
 }
@@ -1431,35 +1461,35 @@ form .button-area {
 }
 .button-area button:hover i {
   left: 8px;
-}
+} */
 /* contact section media queries starts */
 /* Responsivité ajoutée à votre CSS existant */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   
   .contact .content .image-box,
   .contact .content form {
-      width: 100%; /* Pleine largeur */
-      padding: 20px; /* Ajustez l'espacement si nécessaire */
-      margin-top: 20px auto; /* Espace entre les éléments */
+      width: 100%;
+      padding: 20px;
+      margin-top: 20px auto; 
   }
-}
-
+} */
+/* 
 @media (max-width: 768px) {
 
   .contact .content {
-      flex-direction: column; /* Elements empilés verticalement */
+      flex-direction: column;
   }
   .contact .content .image-box img {
-      max-width: 100%; /* Image en pleine largeur */
+      max-width: 100%; 
   }
-}
+} */
 
 /* Réduire encore plus l'espacement pour les très petits appareils */
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .contact .content {
-      padding: 10px; /* Espacement interne réduit */
+      padding: 10px; 
   }
-}
+} */
 
 /* contact section media queries ends */
 /* contact section ends */

@@ -22,3 +22,6 @@ ajouter le bouton back to home
 ajouter bouton : view ressource  
 ajouter une option pour agrandir mon image 
 Je veux que ça m'affiche le nombre d'images en doussous des screen sous forme de pagination 
+
+
+il manque la responsivité de carousel slide img :

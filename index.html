@@ -26,7 +26,7 @@
 
 <!-- navbar starts -->
 <header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Yanis</a>
+        <a href="/" class="logo"><i class="fab fa-yoast"></i>  Yanis</a>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -34,11 +34,11 @@
             <li><a class="active" href="#home">Accueil</a></li>
             <li><a href="#about">Profil</a></li>
             <li><a href="#skills">Compétences</a></li>
-            <li><a href="#education">Formations</a></li>
+            <li><a href="#education">Formation</a></li>
             <li><a href="#work">Projets</a></li>
             <li><a href="#experience">Expériences</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
+<!--             <li><a href="#contact">Contact</a></li>
+ -->            </ul>
         </nav>
 </header>
 <!-- navbar ends -->
@@ -83,20 +83,20 @@
         <h3>Je suis Yanis</h3>
         <span class="tag">Chef de projet AMOA junior</span>
         
-        <p>Je m’appelle Yanis Slimani 🙋‍♂️, étudiant en Master spécialisé en Management des systèmes d'information et de transformation digitale à Epitech 🏫, alternant en tant qu'assistant à Maîtrise d’Ouvrage (AMOA) à La Française des Jeux 🎰.</p>
-        <p>Ma passion ? Piloter la digitalisation 💡 et l’amélioration des systèmes d'information 💾. Je m’épanouis dans la gestion de projets numériques 🌐, mariant compétences techniques et méthodologies de gestion 📊 pour mener à bien des stratégies innovantes et orientées client 🎯.</p>
-        <p>Mon métier ? Transformer les besoins en solutions performantes 🔍 et les défis en réussites 🏆, en vue d'atteindre l'excellence dans la satisfaction client 😊.</p>
+        <p><b>Qui suis-je ? </b>Je m’appelle Yanis Slimani 🙋‍♂️, étudiant en Master spécialisé en Management des systèmes d'information et de transformation digitale à Epitech 🏫, alternant en tant qu'assistant à Maîtrise d’Ouvrage (AMOA) à La Française des Jeux 🎰.</p>
+        <p><b>Ma passion ?</b> Piloter la digitalisation 💡 et l’amélioration des systèmes d'information 💾. Je m’épanouis dans la gestion de projets numériques 🌐, mariant compétences techniques et méthodologies de gestion 📊 pour mener à bien des stratégies innovantes et orientées client 🎯.</p>
+        <p><b>Mon métier ?</b> Transformer les besoins en solutions performantes 🔍 et les défis en réussites 🏆, en vue d'atteindre l'excellence dans la satisfaction client 😊.</p>
     
         
         <div class="box-container">
             <div class="box">
-              <p><span> Age: </span> 24 Ans</p>
-              <p><span> phone : </span> +33 (0) 7 61 60 39 49 </p>
+              <p><span> Âge: </span> 24 Ans</p>
+              <p><span> Téléphone : </span> +33 (0) 7 61 60 39 49 </p>
             </div>
             
             <div class="box">
-              <p><span> email : </span> yanis.slimani2017@gmail.com</p>
-              <p><span> Adresse : </span>Paris ,Île-de-France, France</p>
+              <p><span> Email : </span> yanis.slimani2017@gmail.com</p>
+              <p><span> adresse e-mail : </span>Paris, Île-de-France, France</p>
             </div>
         </div>
         
@@ -145,9 +145,9 @@
 
 
   <div class="pagination" style="text-align: center; margin-top: 20px;">
-    <button class="prev-btn">Prev</button>
+    <button class="prev-btn">Précédent</button>
     <button class="page-btn active" data-page="1">1</button>
-    <button class="next-btn">Next</button>
+    <button class="next-btn">Suivant</button>
     <!-- Ajoutez plus de boutons de pagination ici selon vos besoins -->
   </div>
 </section>
@@ -210,7 +210,7 @@
 
 <!-- work project section starts -->
 <section class="work" id="work"   >
-  <h1 class="heading"><i class="fas fa-graduation-cap"></i> Projects <span>& experience</span></h1>
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> Mes <span>Projets</span></h1>
 
   <div class="introduction" >
     <div class="intro-text">
@@ -224,11 +224,11 @@
 
   <div class="filter-container">
     <button class="filter-btn" data-filter="all">Tous</button>
-    <button class="filter-btn" data-filter="Web">Web</button>
-    <button class="filter-btn" data-filter="Backend">Backend</button>
-    <button class="filter-btn" data-filter="React, Node">Fullstack</button>
-    <button class="filter-btn" data-filter="Vue, Vuex">Vue</button>
-    <button class="filter-btn" data-filter="Angular, TypeScript">Angular</button> 
+    <button class="filter-btn" data-filter="Transformation Digitale"> Management de Projet</button>
+    <button class="filter-btn" data-filter="Développement Web">Développement Web</button>
+    <button class="filter-btn" data-filter="IA">IA</button>
+    <button class="filter-btn" data-filter="Développement Mobile">Développement Mobile</button>
+    <button class="filter-btn" data-filter="Étude de faisabilité">Étude de faisabilité</button> 
   </div>
 
   <div class="project-container">
@@ -328,7 +328,7 @@
 
 
 <!-- contact section starts -->
-<section class="contact " id="contact" >
+<!-- <section class="contact " id="contact" >
 
   
   
@@ -339,34 +339,35 @@
       <div class="image-box">
         <img draggable="false" src="./assets/images/contact1.png" alt="">
       </div>
-    <form id="contact-form">
+      <form id="contact-form">
+        <div class="form-group">
+          <div class="field">
+            <input type="text" name="user_name" placeholder="Nom et Prénom" required>
+            <i class='fas fa-user'></i>
+          </div>
+          <div class="field">
+            <input type="email" name="user_email" placeholder="Email" required>
+            <i class='fas fa-envelope'></i>
+          </div>
+          <div class="field">
+            <input type="tel" name="user_phone" placeholder="Numéro de téléphone ( Facultatif )">
+            <i class='fas fa-phone-alt'></i>
+          </div>
+          <div class="message">
+            <textarea placeholder="Message" name="user_message" required></textarea>
+            <i class="fas fa-comment-dots"></i>
+          </div>
+        </div>
+        <div class="button-area">
+          <button type="submit">
+            Envoyer <i class="fa fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
       
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="Nom et Prénom" placeholder="Nom et Prénom" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="Numéro de téléphone" placeholder="Numéro de téléphone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Envoyer <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
   </div>
   </div>
-</section>
+</section> -->
 <!-- contact section ends -->
 
 
@@ -378,6 +379,8 @@
       <div class="box">
           <h3>Yanis Portfolio</h3>
           <p>Merci d'avoir visité mon site web personnel.  <br/> </p>
+          <p>N'hésitez pas à me contacter.  <br/> </p>
+
       </div>
 
       <div class="box">
@@ -385,7 +388,7 @@
           <a href="#home"><i class="fas fa-chevron-circle-right"></i> Accueil</a>
           <a href="#about"><i class="fas fa-chevron-circle-right"></i> Profil</a>
           <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Compétences</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> Formations</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> Formation</a>
           <a href="#work"><i class="fas fa-chevron-circle-right"></i> Projets</a>
           <a href="#experience"><i class="fas fa-chevron-circle-right"></i> Expériences</a>
       </div>
@@ -405,7 +408,7 @@
       </div> 
   </div>
 
-  <h1 class="credit">Conçu par <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/slimani-yanis/"> Yanis Slimani</a></h1>
+  <h1 class="credit">Conçu  <i class="fa fa-heart pulse" ></i>par <a href="https://www.linkedin.com/in/slimani-yanis/"> Yanis Slimani</a></h1>
 
 </section>
 <!-- footer section ends -->
@@ -452,6 +455,8 @@
   });
 </script>
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
 
 
 </body>

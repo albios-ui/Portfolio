@@ -78,20 +78,28 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+        // Initialiser EmailJS avec votre User ID
+            // Envoyer le formulaire avec EmailJS
 
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+
+    // Configuration d'EmailJS
+/*     emailjs.init("DUPqSOLfVqHAUmH9F");
+
+    $("#contact-form").submit(function (event) {
+        event.preventDefault(); 
+
+    
+        emailjs.sendForm('service_i0pmrul', 'template_9ngiyvp', this)
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
+                alert("Message envoyé avec succès !");
+                document.getElementById("contact-form").reset(); 
             }, function (error) {
                 console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
+                alert("Échec de l'envoi du message. Veuillez réessayer.");
             });
-        event.preventDefault();
-    });
+    }); */
+
     // <!-- emailjs to mail contact form data -->
 
 });
@@ -99,11 +107,11 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Yanis";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
-            document.title = "Come Back To Portfolio";
+            document.title = "Revenir Au Portfolio";
             $("#favicon").attr("href", "assets/images/favhand.png");
         }
     });
@@ -173,26 +181,20 @@ function showProjects(projects) {
     });
     // <!-- tilt js effect ends -->
 
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-     const srtop = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 1000,
-        reset: true
-    }); 
+
 
     /* SCROLL PROJECTS */
     srtop.reveal('.work .box', { interval: 200 });
 
 }
 
-fetchData().then(data => {
+/* fetchData().then(data => {
     showSkills(data);
-});
+}); */
 
-fetchData("projects").then(data => {
+/* fetchData("projects").then(data => {
     showProjects(data);
-});
+}); */
 
 // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
@@ -230,17 +232,7 @@ document.onkeydown = function (e) {
     }
 }
 
-// Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-// End of Tawk.to Live Chat
+
 
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
@@ -248,7 +240,7 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     origin: 'top',
     distance: '80px',
     duration: 1000,
-    reset: true
+    reset: false
 }); 
 /* SCROLL HOME */
  srtop.reveal('.home .content h3', { delay: 200 });
@@ -439,11 +431,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* document.addEventListener('DOMContentLoaded', () => {
     const projects = [
-      { name: 'Project One', date: '2022-10', description: 'Brief description of the first project.', tools: 'HTML, CSS, JavaScript', imageUrl: 'https://via.placeholder.com/20x150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Two', date: '2022-11', description: 'Brief description of the second project.', tools: 'Python, Django', imageUrl: 'https://via.placeholder.com/120', codeLink: '#', liveLink: '#' },
-      { name: 'Project Three', date: '2022-12', description: 'Brief description of the third project.', tools: 'React, Node', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Four', date: '2023-01', description: 'Brief description of the fourth project.', tools: 'Vue, Vuex', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
-      { name: 'Project Five', date: '2023-02', description: 'Brief description of the fifth project.', tools: 'Angular, TypeScript', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' }
+      { name: 'Project One', date: '2022-10', Titre: 'Brief Titre of the first project.', tools: 'HTML, CSS, JavaScript', imageUrl: 'https://via.placeholder.com/20x150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Two', date: '2022-11', Titre: 'Brief Titre of the second project.', tools: 'Python, Django', imageUrl: 'https://via.placeholder.com/120', codeLink: '#', liveLink: '#' },
+      { name: 'Project Three', date: '2022-12', Titre: 'Brief Titre of the third project.', tools: 'React, Node', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Four', date: '2023-01', Titre: 'Brief Titre of the fourth project.', tools: 'Vue, Vuex', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' },
+      { name: 'Project Five', date: '2023-02', Titre: 'Brief Titre of the fifth project.', tools: 'Angular, TypeScript', imageUrl: 'https://via.placeholder.com/150', codeLink: '#', liveLink: '#' }
     ].sort((a, b) => b.date.localeCompare(a.date)); // Tri par date décroissante
   
     const projectsContainer = document.querySelector('.project-container');
@@ -461,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="project-info">
               <h3>${project.name}</h3>
               <span>${project.date}</span>
-              <p>${project.description}</p>
+              <p>${project.Titre}</p>
               <p>Tools: ${project.tools}</p>
               <div class="project-links">
                 <a href="${project.codeLink}" class="project-button project-code">
@@ -499,11 +491,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', () => {
     
     const projects = [
-      { id: '1', name: 'Project One', date: '2022-10', description: 'Brief description of the first project.', role: 'Developer', type:'Web', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { id: '2', name: 'Project Two', date: '2022-11', description: 'Brief description of the second project.', role: 'Lead Developer', type: 'Backend', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { id: '3', name: 'Project Three', date: '2022-12', description: 'Brief description of the third project.', role: 'Project Manager', type: 'Fullstack', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { id: '4', name: 'Project Four', date: '2023-01', description: 'Brief description of the fourth project.', role: 'UI/UX Designer', type: '', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' },
-      { id: '5', name: 'Project Five', date: '2023-02', description: 'Brief description of the fifth project.', role: 'Frontend Developer', type: 'Angula', imageUrl: 'https://via.placeholder.com/200x150', codeLink: '#', liveLink: '#' }
+        { id: '8', name: 'KIABI', date: '2024-03', Titre: "Stratégie Numérique pour l'Amélioration de l'Expérience Client chez Kiabi", type:'Transformation Digitale', imageUrl: 'assets/images/projects/KIABI.jpg',  },
+        { id: '7', name: 'Traitement du Langage Naturel (NLP)', date: '2024-02', Titre: "Optimisation d’itinéraires de voyages - (NLTK)", type:'IA', imageUrl: 'assets/images/projects/IA.png', codeLink: '#', liveLink: '#' },
+        { id: '9', name: 'Projet de Fin d’études – DineInVR ', date: '2024-05', Titre: 'DineIn VR - Révolution Culinaire via Réalité Augmentée ', type:'Transformation Digitale', imageUrl: 'assets/images/projects/vr3.png', codeLink: '#', liveLink: '#' },
+        { id: '6', name: "Réponse D'appel D'offre : FINTECH", date: '2023-07', Titre: "Modernisation de l'Assurance à responsabilité Civile de l’organisme public Transport for London", type:'Transformation Digitale', imageUrl: 'assets/images/projects/TFL.jpg', codeLink: '#', liveLink: '#' },
+        { id: '5', name: "Réponse D'appel D'offre : GREENTECH", date: '2023-07', Titre: " Innovation technologiques des Cultures de Vignes - Réponse à l'Appel d'Offre du syndicat des Vignerons Indépendants de France", type:'Transformation Digitale', imageUrl: 'assets/images/projects/vignes.jpg', codeLink: '#', liveLink: '#' },
+        { id: '4', name: 'Dossier Médical Partagé (DMP)', date: '2023-06', Titre: 'Implémentation du Dossier Médical Partagé - Vers une Santé Numérique Intégrée', type:'Transformation Digitale', imageUrl: 'assets/images/projects/Dossier-medical.jpeg', codeLink: '#', liveLink: '#' },
+        { id: '3', name: 'PICTS MANAGER', date: '2023-02', Titre: "Application mobile de gestion d'images  ", type:'Développement Mobile', imageUrl: 'assets/images/projects/1280_alt_portail_36990_design-app-mobile.jpg', codeLink: '#', liveLink: '#' },
+        { id: '2', name: 'Gotham', date: '2023-02', Titre: 'Transformation Digitale pour la gestion de déchets de Gotham City', type:'Transformation Digitale', imageUrl: 'assets/images/projects/Note-de-veille-Gestion-intelligente-des-dechets-et-Smart-City.png', codeLink: '#', liveLink: '#' },
+        { id: '1', name: 'Time Manager', date: '2022-11', Titre: "Application de Gestion de Tâches", type:'Développement Web', imageUrl: 'assets/images/projects/maxresdefault.jpg', codeLink: '#', liveLink: '#' },
+        { id: '10', name: 'Infrastructure Réseau ', date: '2021-05', Titre:"Mise en place d’une infrastructure réseau sans fil pour le département d’Informatique de l’UMMTO.", type:'Étude de faisabilité', imageUrl: 'assets/images/projects/network_infrastructure.jpg', codeLink: '#', liveLink: '#' },
+        { id: '11', name: 'Smartech', date: '2020-07', Titre: 'Site e-commerce de vente de vêtements en ligne', type:'Développement Web', imageUrl: 'assets/images/projects/1641689-full.jpg', codeLink: '#', liveLink: '#' },
       // Ajoutez plus de projets ici selon vos besoins
     ];
   
@@ -522,20 +520,19 @@ document.addEventListener('DOMContentLoaded', () => {
           const projectCard = document.createElement('div');
           projectCard.className = 'project-card';
           projectCard.innerHTML = `
-            <img src="${project.imageUrl}" alt="${project.name}" style="width:100%; height:auto; border-radius: 5px;">
-
+            <img src="${project.imageUrl}" alt="${project.name}" style=" border-radius: 5px;">
             <div class="project-info">
               <h3>${project.name}</h3>
               <span>${project.date}</span>
-              <p>${project.description}</p>
-              <p>Role: <span>  ${project.role}<span> </p>
-              <p>Type: <span> ${project.type}<span> </p>
+              <p>${project.Titre}</p>
+              <p>Type : <span> ${project.type}<span> </p>
+              
               <div class="project-links">
                 <a href="${project.codeLink}" class="project-button project-code" target="_blank">
-                  <i class="fas fa-code"></i> Project Code
+                  <i class="fas fa-code"></i> Ressources
                 </a>
                 <a href="projects/Myprojects.html?project=${project.id}" class="project-button live-project" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View Project
+                  <i class="fas fa-external-link-alt"></i> Voir le projet
                 </a>
 
               </div>

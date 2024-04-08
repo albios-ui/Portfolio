@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title:"Développement d'une Application Web de Gestion de Tâches ",
             category: 'Développement Web',
             year: '2022',
-            team: 'Groupe',
+            team: 'Groupe /3 Semaines',
             roles: [
                 "Développement d'une API de gestion de tâches, axée sur les opérations CRUD, en utilisant Elixir et Phoenix",
                 "Conception du Front-end d'une application Monopage (SPA) avec Vue.js pour une interface utilisateur interactive",
@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
             abilities:"Persévérance, Autonomie, Adaptabilité",
             screenshots: ['../assets/images/projects/maxresdefault.jpg'],
             source :'https://github.com/albios-ui/Time-Manager',
+            ppt: '',
+
+            
 
         },
         {
@@ -64,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             screenshots: ['../assets/images/projects/gotham4.jpg', '../assets/images/projects/gotham1.png', '../assets/images/projects/gotham2.png','../assets/images/projects/gotham3.jpg'],
             source :'https://github.com/albios-ui/Gotham',
+            ppt: '../assets/ressources/SWAG.pdf',
+
             
         },
         {
@@ -83,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
             abilities:"Développement Full-Stack, Gestion de Base de Données.",
             screenshots: ['../assets/images/projects/pict1.png','../assets/images/projects/pict2.png','../assets/images/projects/pict3.png','../assets/images/projects/pict4.png',],
             source :'https://github.com/albios-ui/PICTS-MANAGER',
+            ppt: '../assets/ressources/project-T-DEV800.pdf',
+
 
             
         },
@@ -104,6 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
             abilities:"Gestion de projet de santé numérique, Stratégies pour surmonter la résistance au changement",
             screenshots: ['../assets/images/projects/dmp1.png', '../assets/images/projects/dmp2.png','../assets/images/projects/dmp3.png','../assets/images/projects/dmp4.png','../assets/images/projects/dmp5.png'],
             source :'https://github.com/albios-ui/Dossier-M-dical-Partag-DMP-',
+            ppt: '../assets/ressources/PrésentationDMP.pdf',
+
 
             
         },        {
@@ -126,6 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
             method: 'Agile Scrum',
             screenshots: ['../assets/images/projects/greentech1.jpg','../assets/images/projects/greentech2.jpeg','../assets/images/projects/greentech3.jpg','../assets/images/projects/greentech4.jpg','../assets/images/projects/greentech5.png'],
             source :'https://github.com/albios-ui/R-ponse-D-appel-D-offre-GREENTECH',
+            ppt: '../assets/ressources/Synthèse Du projet Greentech.pdf',
+
 
             
         },        {
@@ -134,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title:"Modernisation de l'Assurance à responsabilité Civile de l’organisme public Transport for London (TFL) - Réponse à l'Appel d'Offre de la TFL",
             category: "Transformation Digitale",
             year: "2023",
-            team: 'Groupe',
+            team: 'Groupe / 4 Mois',
             tache:"Chef de Projet",
             
             roles: [
@@ -150,6 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
             method: 'Agile Scrum',
             screenshots: ['../assets/images/projects/tfl1.jpg'],
             source :'https://github.com/albios-ui/R-ponse-D-appel-D-offre-FINTECH',
+            ppt: '../assets/ressources/Proposition commerciale FINTECH.pdf',
+
 
             
         },        {
@@ -169,6 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
             method: 'Agile Scrum',
             screenshots: ['../assets/images/projects/ia1.png', '../assets/images/projects/ia2.png'],
             source :'https://github.com/albios-ui/Traitement-Du-Langage-Naturel-NLP-',
+            ppt: '../assets/ressources/Présentation projet ia.pdf',
+
 
             
         },        {
@@ -190,6 +205,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             screenshots: ['../assets/images/projects/kiabi1.png','../assets/images/projects/kiabi2.jpg','../assets/images/projects/kiabi3.jpg',],
             source :'https://github.com/albios-ui/Transformation-Digitale-KIABI',
+            ppt: '../assets/ressources/DIT 901-PAR20-Présentation 1.pdf',
+
 
             
         },        {
@@ -198,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title:"DineIn VR - Révolution Culinaire via Réalité Augmentée pour Projet de Fin d'Études (Ressources non disponbile)",
             category: "Management de projet ",
             year: "Mars 2023 ( en cours )",
-            team: 'Groupe',
+            team: 'Groupe / 18 Mois',
             context :"Chef de projet dans le cadre d'un projet de fin d'études commencé en mars 2023 avec une équipe de 10 étudiants spécialisés en Cloud, IA, VR, Développement, Sécurité et Bases de Données. Objectif : développer DineIn VR, une application mobile qui enrichit l'expérience culinaire grâce à la réalité augmentée et l'intelligence artificielle",
             roles: [
                 "Conception et rédaction d'un cahier des charges détaillé, en alignement avec les besoins des utilisateurs finaux et les objectifs commerciaux",
@@ -209,8 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             technologies: "Notion",
             method: 'Agile Scrum',
-            screenshots: ['../assets/images/projects/menu.png','../assets/images/projects/vr1.png','../assets/images/projects/vr2.png',],
+            abilities:"Gestion de projet, Leadership, Communication, Résolution de Problèmes, Adaptabilités",
+            screenshots: ['../assets/images/projects/menu.png','../assets/images/projects/vr1.jpg','../assets/images/projects/vr2.png',],
             source :'https://github.com/albios-ui/Projet-De-Fin-D-tudes-DineInVR',
+
 
             
         },        {
@@ -219,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title:"Mise en place d’une infrastructure réseau sans fil pour le département d’Informatique de l’UMMTO",
             category: "Étude de faisabilité ",
             year: "2021",
-            team: 'Solo',
+            team: 'Solo / 3 Mois',
             roles: [
                 "Élaboration d’un cahier des charges ",
                 "Déploiement d’un système de gestion de fichier ‘Pydio’ ainsi que sa configuration",
@@ -232,6 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
             abilities:"Autonomie, Persévérance",
             screenshots: ['../assets/images/projects/réseau.png'],
             source :'https://github.com/albios-ui/Infrastructure-R-seau',
+            ppt: '../assets/ressources/Projet PSR 2021.pdf',
+
 
             
         },        {
@@ -240,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title:"Smartech - Apllication Web de vente de vêtements en ligne",
             category: "Développement Web",
             year: "2020",
-            team: 'Solo',
+            team: 'Solo / 3 Mois',
             roles: [
                 "Développement Backend et Frontend de l'application",
                 "Conception de la base de données",
@@ -249,6 +270,8 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: "HTML,CSS,JS,PHP",
             screenshots: ['../assets/images/projects/ummto1.png','../assets/images/projects/ummto2.png','../assets/images/projects/ummto3.png','../assets/images/projects/ummto4.png'],
             source :'https://github.com/albios-ui/Smartech',
+            ppt: '../assets/ressources/Mémoire L3 (version finale).pdf',
+
 
             
         },
@@ -308,7 +331,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="${project.source}" class="project-button project-code">
                   <i class="fas fa-code"></i> Ressources du projet
                 </a>
-
               </div>
         `;
         // Gestion des captures d'écran
@@ -316,8 +338,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${screenshot}" class="screenshot">
         `).join('');
 
-
-
+ // Nouveau : Ajout de la logique pour afficher le fichier PowerPoint (PDF)
+ const pptContainer = document.querySelector('.ppt-container');
+    if (project.ppt && project.ppt.trim() !== '') {
+        pptContainer.innerHTML = `<embed src="${project.ppt}" type="application/pdf" width="100%" height="500px" allow="auto"/>`;
+        pptContainer.style.display = 'block'; // Assurez-vous que le conteneur est visible si le ppt est défini
+    } else {
+        pptContainer.style.display = 'none'; // Cache le conteneur du ppt s'il n'est pas défini
+}
       // Gestion des boutons de carrousel
       document.querySelector('.prev').addEventListener('click', () => {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : project.screenshots.length - 1;

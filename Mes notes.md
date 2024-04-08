@@ -1,2 +1,0 @@
-footer myprojecthtml 
-vérification
